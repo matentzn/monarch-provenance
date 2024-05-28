@@ -1,5 +1,5 @@
 # Auto generated from monarch_data.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-05-28T17:35:50
+# Generation date: 2024-05-28T17:36:14
 # Schema: monarch-data
 #
 # id: https://w3id.org/monarchinitiative/monarch-data
@@ -38,7 +38,7 @@ EXAMPLE = CurieNamespace('example', 'https://example.org/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 MONARCH_DATA = CurieNamespace('monarch_data', 'https://w3id.org/monarchinitiative/monarch-data/')
 PROV = CurieNamespace('prov', 'http://www.w3.org/ns/prov#')
-RDFS = CurieNamespace('rdfs', 'http://example.org/UNKNOWN/rdfs/')
+RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
 DEFAULT_ = MONARCH_DATA
 

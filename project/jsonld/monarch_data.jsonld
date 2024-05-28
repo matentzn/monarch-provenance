@@ -42,6 +42,10 @@
     {
       "prefix_prefix": "dcterms",
       "prefix_reference": "http://purl.org/dc/terms/"
+    },
+    {
+      "prefix_prefix": "rdfs",
+      "prefix_reference": "http://www.w3.org/2000/01/rdf-schema#"
     }
   ],
   "default_prefix": "monarch_data",
@@ -362,9 +366,9 @@
       "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/name",
       "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
       "mappings": [
-        "http://example.org/UNKNOWN/rdfs/label"
+        "http://www.w3.org/2000/01/rdf-schema#label"
       ],
-      "slot_uri": "http://example.org/UNKNOWN/rdfs/label",
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#label",
       "owner": "NamedThing",
       "domain_of": [
         "NamedThing"
@@ -747,9 +751,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "monarch_data.yaml",
-  "source_file_date": "2024-05-28T17:35:42",
-  "source_file_size": 3925,
-  "generation_date": "2024-05-28T17:35:47",
+  "source_file_date": "2024-05-28T17:36:06",
+  "source_file_size": 3971,
+  "generation_date": "2024-05-28T17:36:11",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/monarch_data.context.jsonld",

@@ -17,6 +17,7 @@ prefixes:
   prov: http://www.w3.org/ns/prov#
   dcat: https://www.w3.org/ns/dcat#
   dcterms: http://purl.org/dc/terms/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 default_prefix: monarch_data
 default_range: string
 
