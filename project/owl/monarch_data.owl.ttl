@@ -14,103 +14,103 @@ monarch_data:Dataset a owl:Class,
     rdfs:label "Dataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:version ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:generated_by ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:publisher ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:identifier ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:license ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:rights ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:license ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:contactPoint ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:identifier ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:distribution ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty monarch_data:identifier ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:version ],
+            owl:onProperty monarch_data:rights ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:generated_by ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:version ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:description ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:description ],
+            owl:onProperty monarch_data:contactPoint ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:issued ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:publisher ],
+            owl:onProperty monarch_data:title ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:distribution ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:generated_by ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:generated_by ],
+            owl:onProperty monarch_data:rights ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom monarch_data:Distribution ;
             owl:onProperty monarch_data:distribution ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:publisher ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:distribution ],
+            owl:onProperty monarch_data:publisher ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:identifier ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:rights ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:publisher ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:license ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:license ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty monarch_data:contactPoint ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:issued ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty monarch_data:issued ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:title ],
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:distribution ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:license ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:contactPoint ],
         [ a owl:Restriction ;
             owl:allValuesFrom monarch_data:Activity ;
             owl:onProperty monarch_data:generated_by ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:contactPoint ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:rights ],
+            owl:onProperty monarch_data:publisher ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:description ],
+            owl:onProperty monarch_data:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:identifier ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:license ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:issued ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:version ],
         monarch_data:Entity ;
     skos:definition "Represents a Dataset" ;
     skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
@@ -122,16 +122,16 @@ monarch_data:Activity a owl:Class,
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:used ],
         [ a owl:Restriction ;
-            owl:allValuesFrom monarch_data:Agent ;
-            owl:onProperty monarch_data:attributed_to ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty monarch_data:used ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:attributed_to ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:attributed_to ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom monarch_data:Agent ;
             owl:onProperty monarch_data:attributed_to ],
         [ a owl:Restriction ;
             owl:allValuesFrom monarch_data:Entity ;
@@ -153,41 +153,41 @@ monarch_data:Distribution a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Distribution" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:accessURL ],
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty monarch_data:downloadURL ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:accessURL ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:accessURL ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uri ;
             owl:onProperty monarch_data:downloadURL ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:accessURL ],
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:format ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:format ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:title ],
+            owl:onProperty monarch_data:format ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uri ;
             owl:onProperty monarch_data:accessURL ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:title ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:format ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:format ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:title ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:downloadURL ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:format ],
         monarch_data:Entity ;
     skos:definition "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)." ;
     skos:exactMatch dcat1:Distribution ;
@@ -197,6 +197,12 @@ monarch_data:NamedThing a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "NamedThing" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:identifier ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:description ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:name ],
         [ a owl:Restriction ;
@@ -207,22 +213,16 @@ monarch_data:NamedThing a owl:Class,
             owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty monarch_data:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:identifier ] ;
+            owl:onProperty monarch_data:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:name ] ;
     skos:definition "A generic grouping for any identifiable entity." ;
     skos:exactMatch schema1:Thing ;
     skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
