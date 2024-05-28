@@ -13,18 +13,18 @@ schema1:Thing a sh:NodeShape ;
     sh:description "A generic grouping for any identifiable entity." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
+            sh:description "The description of the dataset." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path dcterms:description ],
+        [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path schema1:identifier ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path rdfs:label ],
-        [ sh:datatype xsd:string ;
-            sh:description "The description of the dataset." ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path dcterms:description ] ;
+            sh:path rdfs:label ] ;
     sh:targetClass schema1:Thing .
 
 monarch_data:Dataset a sh:NodeShape ;
@@ -33,9 +33,20 @@ monarch_data:Dataset a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path schema1:identifier ],
+            sh:order 11 ;
+            sh:path rdfs:label ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path dcterms:license ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path dcterms:publisher ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path dcat1:version ],
         [ sh:datatype xsd:string ;
             sh:description "The description of the dataset." ;
             sh:maxCount 1 ;
@@ -43,12 +54,14 @@ monarch_data:Dataset a sh:NodeShape ;
             sh:path dcterms:description ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:order 7 ;
-            sh:path dcat1:version ],
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:identifier ],
         [ sh:datatype xsd:string ;
+            sh:description "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)." ;
             sh:maxCount 1 ;
-            sh:order 11 ;
-            sh:path rdfs:label ],
+            sh:order 8 ;
+            sh:path dcat1:contactPoint ],
         [ sh:class dcat1:Distribution ;
             sh:description "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)" ;
             sh:maxCount 1 ;
@@ -57,30 +70,17 @@ monarch_data:Dataset a sh:NodeShape ;
             sh:path dcat1:distribution ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path dcterms:publisher ],
-        [ sh:datatype xsd:string ;
-            sh:description "The title of the dataset." ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path dcterms:title ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path dcterms:license ],
-        [ sh:datatype xsd:string ;
-            sh:description "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)." ;
-            sh:maxCount 1 ;
-            sh:order 8 ;
-            sh:path dcat1:contactPoint ],
+            sh:order 6 ;
+            sh:path dcterms:rights ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:order 3 ;
             sh:path dcterms:issued ],
         [ sh:datatype xsd:string ;
+            sh:description "The title of the dataset." ;
             sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path dcterms:rights ],
+            sh:order 0 ;
+            sh:path dcterms:title ],
         [ sh:class prov:Activity ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -92,12 +92,10 @@ prov:Activity a sh:NodeShape ;
     sh:closed true ;
     sh:description "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities [ref](https://www.w3.org/TR/prov-o/#Activity)." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class prov:Agent ;
-            sh:description "Attribution is the ascribing of an entity to an agent [ref](https://www.w3.org/TR/prov-o/#wasAttributedTo)." ;
+    sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path prov:wasAttributedTo ],
+            sh:order 3 ;
+            sh:path rdfs:label ],
         [ sh:datatype xsd:string ;
             sh:description "The description of the dataset." ;
             sh:maxCount 1 ;
@@ -110,13 +108,15 @@ prov:Activity a sh:NodeShape ;
             sh:path prov:used ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path rdfs:label ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 2 ;
-            sh:path schema1:identifier ] ;
+            sh:path schema1:identifier ],
+        [ sh:class prov:Agent ;
+            sh:description "Attribution is the ascribing of an entity to an agent [ref](https://www.w3.org/TR/prov-o/#wasAttributedTo)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path prov:wasAttributedTo ] ;
     sh:targetClass prov:Activity .
 
 prov:Agent a sh:NodeShape ;
@@ -124,11 +124,6 @@ prov:Agent a sh:NodeShape ;
     sh:description "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity [ref](https://www.w3.org/TR/prov-o/#Agent)." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "The description of the dataset." ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path dcterms:description ],
-        [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 0 ;
@@ -136,7 +131,12 @@ prov:Agent a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path rdfs:label ] ;
+            sh:path rdfs:label ],
+        [ sh:datatype xsd:string ;
+            sh:description "The description of the dataset." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path dcterms:description ] ;
     sh:targetClass prov:Agent .
 
 prov:Entity a sh:NodeShape ;
@@ -145,6 +145,10 @@ prov:Entity a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path rdfs:label ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 0 ;
             sh:path schema1:identifier ],
@@ -152,21 +156,23 @@ prov:Entity a sh:NodeShape ;
             sh:description "The description of the dataset." ;
             sh:maxCount 1 ;
             sh:order 2 ;
-            sh:path dcterms:description ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path rdfs:label ] ;
+            sh:path dcterms:description ] ;
     sh:targetClass prov:Entity .
 
 dcat1:Distribution a sh:NodeShape ;
     sh:closed true ;
     sh:description "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:anyURI ;
+    sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path dcat1:accessURL ],
+            sh:minCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:identifier ],
+        [ sh:datatype xsd:string ;
+            sh:description "The description of the dataset." ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path dcterms:description ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:order 5 ;
@@ -176,24 +182,18 @@ dcat1:Distribution a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path dcterms:title ],
-        [ sh:datatype xsd:anyURI ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path dcat1:downloadURL ],
         [ sh:datatype xsd:string ;
             sh:description "The title of the dataset." ;
             sh:maxCount 1 ;
             sh:order 3 ;
             sh:path dcterms:format ],
-        [ sh:datatype xsd:string ;
-            sh:description "The description of the dataset." ;
+        [ sh:datatype xsd:anyURI ;
             sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path dcterms:description ],
-        [ sh:datatype xsd:string ;
+            sh:order 1 ;
+            sh:path dcat1:accessURL ],
+        [ sh:datatype xsd:anyURI ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 4 ;
-            sh:path schema1:identifier ] ;
+            sh:order 2 ;
+            sh:path dcat1:downloadURL ] ;
     sh:targetClass dcat1:Distribution .
 

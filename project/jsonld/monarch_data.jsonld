@@ -753,7 +753,7 @@
   "source_file": "monarch_data.yaml",
   "source_file_date": "2024-05-28T17:36:06",
   "source_file_size": 3971,
-  "generation_date": "2024-05-28T17:36:40",
+  "generation_date": "2024-05-28T17:39:49",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/monarch_data.context.jsonld",
