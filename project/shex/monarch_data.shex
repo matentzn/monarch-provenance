@@ -1,0 +1,117 @@
+BASE <https://w3id.org/monarchinitiative/monarch-data/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX schema1: <http://schema.org/>
+PREFIX dcat1: <https://www.w3.org/ns/dcat#>
+PREFIX rdfs1: <http://example.org/UNKNOWN/rdfs/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<Activity> CLOSED {
+    (  $<Activity_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          prov:used @<Entity> ? ;
+          prov:wasAttributedTo @<Agent> ?
+       ) ;
+       rdf:type [ prov:Activity ]
+    )
+}
+
+<Agent> CLOSED {
+    (  $<Agent_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema1:Thing ] ?
+       ) ;
+       rdf:type [ prov:Agent ]
+    )
+}
+
+<Dataset> CLOSED {
+    (  $<Dataset_tes> (  &<Entity_tes> ;
+          rdf:type [ prov:Entity ] ? ;
+          dcterms:title @linkml:String ? ;
+          dcterms:issued @linkml:String ? ;
+          dcterms:publisher @linkml:String ? ;
+          dcterms:license @linkml:String ? ;
+          dcterms:rights @linkml:String ? ;
+          dcat1:version @linkml:String ? ;
+          dcat1:contactPoint @linkml:String ? ;
+          dcat1:distribution @<Distribution> ? ;
+          prov:wasGeneratedBy @<Activity> ?
+       ) ;
+       rdf:type [ <Dataset> ]
+    )
+}
+
+<Distribution> CLOSED {
+    (  $<Distribution_tes> (  &<Entity_tes> ;
+          rdf:type [ prov:Entity ] ? ;
+          dcterms:title @linkml:String ? ;
+          dcat1:accessURL @linkml:Uri ? ;
+          dcat1:downloadURL @linkml:Uri ? ;
+          dcterms:format @linkml:String ?
+       ) ;
+       rdf:type [ dcat1:Distribution ]
+    )
+}
+
+<Entity>  (
+    CLOSED {
+       (  $<Entity_tes> (  &<NamedThing_tes> ;
+             rdf:type [ schema1:Thing ] ?
+          ) ;
+          rdf:type [ prov:Entity ]
+       )
+    } OR @<Dataset> OR @<Distribution>
+)
+
+<NamedThing>  (
+    CLOSED {
+       (  $<NamedThing_tes> (  rdfs1:label @linkml:String ? ;
+             dcterms:description @linkml:String ?
+          ) ;
+          rdf:type [ schema1:Thing ]
+       )
+    } OR @<Activity> OR @<Agent> OR @<Entity>
+)
+
+

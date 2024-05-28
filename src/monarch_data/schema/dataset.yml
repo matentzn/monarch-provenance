@@ -1,0 +1,372 @@
+name: Dataset
+id: https://example.org/Dataset
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+default_prefix: Dataset
+slots:
+  '@id': {}
+  '@type': {}
+  otherIdentifier:
+    description: reference to a structure identifier.
+  sample:
+    description: Links to a sample of an Dataset, which is a dcat:Distribution.
+  status:
+    description: The status of the dataset  in the context of maturity lifecycle.
+  supportedSchema:
+    description: supported schema for this dataset
+  versionNotes:
+    description: version notes for this dataset
+  contactPoint:
+    description: This property contains contact information that can be used for sending
+      comments about the Dataset.
+  distribution:
+    description: This property links the Dataset to an available Distribution.
+  first:
+    description: the first item of the sequence the dataset belongs to
+  hasCurrentVersion:
+    description: reference to the current (latest) version of a dataset
+  hasVersion:
+    description: A related Dataset that is a version, edition, or adaptation of the
+      described Dataset.
+  inSeries:
+    description: Dataset Series this dataset belong to
+  keyword:
+    description: This property contains a keyword or tag describing the Dataset.
+  keywordMap:
+    description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+      ''fr'': ''french words''}'
+  landingPage:
+    description: This property refers to a web page that provides access to the Dataset,
+      its Distributions and/or additional information.
+  previousVersion:
+    description: previous dataset version
+  qualifiedRelation:
+    description: Qualified relationship with role of the dataset with another resource
+  spatialResolutionInMeters:
+    description: Spatial resolution in meters
+  temporalResolution:
+    description: Temporal resolution using xsd:duration syntax
+  theme:
+    description: A theme of the dataset
+  version:
+    description: The version indicator (name or identifier) of a resource
+  geographicBoundingBox:
+    description: WGS84 Geographic Bounding Box for this dataset
+  liabilityStatement:
+    description: A liability statement about the dataset
+  metadataDistribution:
+    description: Distribution to "original" metadata document
+  purpose:
+    description: The purpose of the dataset
+  purposeMap:
+    description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+      ''fr'': ''french words''}'
+  accessRights:
+    description: Information that indicates whether the Dataset is open data, has
+      access restrictions or is public.
+  accrualPeriodicity:
+    description: This property refers to the frequency at which the Dataset is updated.
+  conformsTo:
+    description: This property refers to an standard which the described Dataset conforms.
+  contributor:
+    description: This property refers to an agent contributing to the Dataset.
+  created:
+    description: This property contains the date on which the Dataset has been first
+      created.
+  creator:
+    description: This property refers to an entity responsible for producing the dataset.
+  description:
+    description: This property contains a free-text account of the Dataset.
+    required: true
+  descriptionMap:
+    description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+      ''fr'': ''french words''}'
+  hasPart:
+    description: This property refers to a related dataset that is part of the described
+      dataset.
+  identifier:
+    multivalued: true
+    required: true
+  isReferencedBy:
+    description: This property is about a related resource, such as a publication,
+      that references, cites, or otherwise points to the Dataset.
+  issued:
+    description: Date of formal issuance (e.g., publication) of the dataset.
+  language:
+    description: A language used in the Dataset.
+  modified:
+    description: The most recent date on which the Dataset was changed or modified.
+  provenance:
+    description: A statement about the lineage of a Dataset
+  publisher:
+    description: This property refers to an organisation responsible for making the
+      Dataset available.
+    required: true
+  relation:
+    description: Reference to a related source
+  replaces:
+    description: Reference to the replaced Dataset
+  rights:
+    description: A statement that concerns all rights for the Dataset not addressed
+      with dcterms:license or dcterms:accessRights, such as copyright statements.
+  rightsHolder:
+    description: This property refers to an Agent (organization) holding rights on
+      the Dataset.
+  source:
+    description: Reference to the source of the dataset
+  spatial:
+    description: This property refers to a geographic region that is covered by the
+      Dataset.
+  subject:
+    description: Primary subject of the dataset
+  temporal:
+    description: A temporal period that the dataset  covers.
+  title:
+    description: This property contains a name given to the Dataset. This property
+      can be repeated for parallel language versions of the name
+    required: true
+  titleMap:
+    description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+      ''fr'': ''french words''}'
+  category:
+    description: Category of the dataset
+  hasQualityMeasurement:
+    description: property referring to a quality measurement for the dataset
+  page:
+    description: A page or document about this dataset
+  qualifiedAttribution:
+    description: An agent having some form of responsibility for the dataset
+  wasAttributedTo:
+    description: Agent attributed to this dataset
+  wasGeneratedBy:
+    description: An activity that generated, or provides the business context for,
+      the creation of the dataset
+  wasUsedBy:
+    description: This property refers to an Activity that used the Dataset
+  image:
+    description: A thumbnail picture illustrating the content of the dataset.
+  scopeNote:
+    description: usage note for the dataset
+  scopeNoteMap:
+    description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+      ''fr'': ''french words''}'
+classes:
+  Dataset:
+    slots:
+    - '@id'
+    - '@type'
+    - otherIdentifier
+    - sample
+    - status
+    - supportedSchema
+    - versionNotes
+    - contactPoint
+    - distribution
+    - first
+    - hasCurrentVersion
+    - hasVersion
+    - inSeries
+    - keyword
+    - keywordMap
+    - landingPage
+    - previousVersion
+    - qualifiedRelation
+    - spatialResolutionInMeters
+    - temporalResolution
+    - theme
+    - version
+    - geographicBoundingBox
+    - liabilityStatement
+    - metadataDistribution
+    - purpose
+    - purposeMap
+    - accessRights
+    - accrualPeriodicity
+    - conformsTo
+    - contributor
+    - created
+    - creator
+    - description
+    - descriptionMap
+    - hasPart
+    - identifier
+    - isReferencedBy
+    - issued
+    - language
+    - modified
+    - provenance
+    - publisher
+    - relation
+    - replaces
+    - rights
+    - rightsHolder
+    - source
+    - spatial
+    - subject
+    - temporal
+    - title
+    - titleMap
+    - category
+    - hasQualityMeasurement
+    - page
+    - qualifiedAttribution
+    - wasAttributedTo
+    - wasGeneratedBy
+    - wasUsedBy
+    - image
+    - scopeNote
+    - scopeNoteMap
+    slot_usage:
+      '@id': {}
+      '@type': {}
+      otherIdentifier:
+        description: reference to a structure identifier.
+      sample:
+        description: Links to a sample of an Dataset, which is a dcat:Distribution.
+      status:
+        description: The status of the dataset  in the context of maturity lifecycle.
+      supportedSchema:
+        description: supported schema for this dataset
+      versionNotes:
+        description: version notes for this dataset
+      contactPoint:
+        description: This property contains contact information that can be used for
+          sending comments about the Dataset.
+      distribution:
+        description: This property links the Dataset to an available Distribution.
+      first:
+        description: the first item of the sequence the dataset belongs to
+      hasCurrentVersion:
+        description: reference to the current (latest) version of a dataset
+      hasVersion:
+        description: A related Dataset that is a version, edition, or adaptation of
+          the described Dataset.
+      inSeries:
+        description: Dataset Series this dataset belong to
+      keyword:
+        description: This property contains a keyword or tag describing the Dataset.
+      keywordMap:
+        description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+          ''fr'': ''french words''}'
+      landingPage:
+        description: This property refers to a web page that provides access to the
+          Dataset, its Distributions and/or additional information.
+      previousVersion:
+        description: previous dataset version
+      qualifiedRelation:
+        description: Qualified relationship with role of the dataset with another
+          resource
+      spatialResolutionInMeters:
+        description: Spatial resolution in meters
+      temporalResolution:
+        description: Temporal resolution using xsd:duration syntax
+      theme:
+        description: A theme of the dataset
+      version:
+        description: The version indicator (name or identifier) of a resource
+      geographicBoundingBox:
+        description: WGS84 Geographic Bounding Box for this dataset
+      liabilityStatement:
+        description: A liability statement about the dataset
+      metadataDistribution:
+        description: Distribution to "original" metadata document
+      purpose:
+        description: The purpose of the dataset
+      purposeMap:
+        description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+          ''fr'': ''french words''}'
+      accessRights:
+        description: Information that indicates whether the Dataset is open data,
+          has access restrictions or is public.
+      accrualPeriodicity:
+        description: This property refers to the frequency at which the Dataset is
+          updated.
+      conformsTo:
+        description: This property refers to an standard which the described Dataset
+          conforms.
+      contributor:
+        description: This property refers to an agent contributing to the Dataset.
+      created:
+        description: This property contains the date on which the Dataset has been
+          first created.
+      creator:
+        description: This property refers to an entity responsible for producing the
+          dataset.
+      description:
+        description: This property contains a free-text account of the Dataset.
+        required: true
+      descriptionMap:
+        description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+          ''fr'': ''french words''}'
+      hasPart:
+        description: This property refers to a related dataset that is part of the
+          described dataset.
+      identifier:
+        multivalued: true
+        required: true
+      isReferencedBy:
+        description: This property is about a related resource, such as a publication,
+          that references, cites, or otherwise points to the Dataset.
+      issued:
+        description: Date of formal issuance (e.g., publication) of the dataset.
+      language:
+        description: A language used in the Dataset.
+      modified:
+        description: The most recent date on which the Dataset was changed or modified.
+      provenance:
+        description: A statement about the lineage of a Dataset
+      publisher:
+        description: This property refers to an organisation responsible for making
+          the Dataset available.
+        required: true
+      relation:
+        description: Reference to a related source
+      replaces:
+        description: Reference to the replaced Dataset
+      rights:
+        description: A statement that concerns all rights for the Dataset not addressed
+          with dcterms:license or dcterms:accessRights, such as copyright statements.
+      rightsHolder:
+        description: This property refers to an Agent (organization) holding rights
+          on the Dataset.
+      source:
+        description: Reference to the source of the dataset
+      spatial:
+        description: This property refers to a geographic region that is covered by
+          the Dataset.
+      subject:
+        description: Primary subject of the dataset
+      temporal:
+        description: A temporal period that the dataset  covers.
+      title:
+        description: This property contains a name given to the Dataset. This property
+          can be repeated for parallel language versions of the name
+        required: true
+      titleMap:
+        description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+          ''fr'': ''french words''}'
+      category:
+        description: Category of the dataset
+      hasQualityMeasurement:
+        description: property referring to a quality measurement for the dataset
+      page:
+        description: A page or document about this dataset
+      qualifiedAttribution:
+        description: An agent having some form of responsibility for the dataset
+      wasAttributedTo:
+        description: Agent attributed to this dataset
+      wasGeneratedBy:
+        description: An activity that generated, or provides the business context
+          for, the creation of the dataset
+      wasUsedBy:
+        description: This property refers to an Activity that used the Dataset
+      image:
+        description: A thumbnail picture illustrating the content of the dataset.
+      scopeNote:
+        description: usage note for the dataset
+      scopeNoteMap:
+        description: 'Language map for property title. E.g. {''es'': ''spanish words'',
+          ''fr'': ''french words''}'
+

@@ -1,0 +1,188 @@
+{
+    "$defs": {
+        "Activity": {
+            "additionalProperties": false,
+            "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities [ref](https://www.w3.org/TR/prov-o/#Activity).",
+            "properties": {
+                "attributed_to": {
+                    "description": "Attribution is the ascribing of an entity to an agent [ref](https://www.w3.org/TR/prov-o/#wasAttributedTo).",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the dataset.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "used": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "title": "Activity",
+            "type": "object"
+        },
+        "Agent": {
+            "additionalProperties": false,
+            "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity [ref](https://www.w3.org/TR/prov-o/#Agent).",
+            "properties": {
+                "description": {
+                    "description": "The description of the dataset.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "title": "Agent",
+            "type": "object"
+        },
+        "Dataset": {
+            "additionalProperties": false,
+            "description": "Represents a Dataset",
+            "properties": {
+                "contactPoint": {
+                    "description": "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the dataset.",
+                    "type": "string"
+                },
+                "distribution": {
+                    "description": "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)",
+                    "type": "string"
+                },
+                "generated_by": {
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "issued": {
+                    "type": "string"
+                },
+                "license": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "publisher": {
+                    "type": "string"
+                },
+                "rights": {
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The title of the dataset.",
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "title": "Dataset",
+            "type": "object"
+        },
+        "Distribution": {
+            "additionalProperties": false,
+            "description": "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution).",
+            "properties": {
+                "accessURL": {
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the dataset.",
+                    "type": "string"
+                },
+                "downloadURL": {
+                    "type": "string"
+                },
+                "format": {
+                    "description": "The title of the dataset.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The title of the dataset.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "title": "Distribution",
+            "type": "object"
+        },
+        "Entity": {
+            "additionalProperties": false,
+            "description": "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary [ref](https://www.w3.org/TR/prov-o/#Entity).",
+            "properties": {
+                "description": {
+                    "description": "The description of the dataset.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "title": "Entity",
+            "type": "object"
+        },
+        "NamedThing": {
+            "additionalProperties": false,
+            "description": "A generic grouping for any identifiable entity.",
+            "properties": {
+                "description": {
+                    "description": "The description of the dataset.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "title": "NamedThing",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/monarchinitiative/monarch-data",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "monarch-data",
+    "type": "object",
+    "version": null
+}

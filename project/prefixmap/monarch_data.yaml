@@ -1,0 +1,26 @@
+{
+   "biolink": "https://w3id.org/biolink/",
+   "dcat": "https://www.w3.org/ns/dcat#",
+   "dcterms": "http://purl.org/dc/terms/",
+   "example": "https://example.org/",
+   "linkml": "https://w3id.org/linkml/",
+   "monarch_data": "https://w3id.org/monarchinitiative/monarch-data/",
+   "prov": "http://www.w3.org/ns/prov#",
+   "rdfs": "http://example.org/UNKNOWN/rdfs/",
+   "schema": "http://schema.org/",
+   "Activity": {
+      "@id": "prov:Activity"
+   },
+   "Agent": {
+      "@id": "prov:Agent"
+   },
+   "Distribution": {
+      "@id": "dcat:Distribution"
+   },
+   "Entity": {
+      "@id": "prov:Entity"
+   },
+   "NamedThing": {
+      "@id": "schema:Thing"
+   }
+}

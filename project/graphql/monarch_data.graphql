@@ -1,0 +1,57 @@
+type Activity
+  {
+    identifier: String!
+    name: String
+    description: String
+    used: Entity
+    attributedTo: Agent
+  }
+
+type Agent
+  {
+    identifier: String!
+    name: String
+    description: String
+  }
+
+type Dataset
+  {
+    name: String
+    title: String
+    description: String
+    identifier: String!
+    issued: String
+    publisher: String
+    license: String
+    rights: String
+    version: String
+    contactPoint: String
+    distribution: Distribution
+    generatedBy: Activity
+  }
+
+type Distribution
+  {
+    identifier: String!
+    name: String
+    description: String
+    title: String
+    accessURL: Uri
+    downloadURL: Uri
+    format: String
+  }
+
+type Entity
+  {
+    identifier: String!
+    name: String
+    description: String
+  }
+
+type NamedThing
+  {
+    identifier: String!
+    name: String
+    description: String
+  }
+

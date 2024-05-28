@@ -1,0 +1,24 @@
+title: Phenio KG
+description: This dataset represents the Phenio ontology converted to a knowledge graph.
+identifier: http://data.monarchinitiative.org/resources/phenio
+issued: 2024-01-15T00:00:00
+publisher: http://data.monarchinitiative.org/monarch
+license: https://creativecommons.org/licenses/by/4.0/
+rights: This dataset is licensed under a Creative Commons Attribution 4.0 International License.
+version: 1.0
+contactPoint: https://monarchinitiative.org/help
+distribution:
+  - title: Phenio KG nodes in KGX-CSV format
+    accessURL: http://data.monarchinitiative.org/releases/2024-01-15/kgs/phenio-nodes.csv
+    downloadURL: http://data.monarchinitiative.org/releases/2024-01-15/kgs/phenio-nodes.csv
+    format: text/csv
+  - title: Phenio KG edges in KGX format
+    accessURL: http://example.org/data/files/aqd-2024.json
+    downloadURL: http://example.org/data/files/download/aqd-2024.json
+    format: application/json
+generated_by:
+  - used:
+    - http://data.monarchinitiative.org/releases/2024-01-15/ontologies/phenio.owl
+    - https://github.com/monarch-initiative/phenio/blob/v2023-12-13/src/ontology/Makefile
+    attributed_to:
+    - Koza v. 123

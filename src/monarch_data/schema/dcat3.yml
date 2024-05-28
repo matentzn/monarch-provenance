@@ -1,0 +1,1517 @@
+.........k.........k...name: dcat
+description: dcat
+id: http://www.w3.org/ns/dcat
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dcat: https://w3id.org/None/
+default_prefix: dcat
+slots:
+  hasVersion:
+    comments:
+    - A related resource that is a version, edition, or adaptation of the described
+      resource.@en
+    - "Este recurso tiene una versi\xF3n espec\xEDfica.@es"
+    - "Per questa risorsa esiste una risorsa pi\xF9 specifica e versionata.@it"
+    - This resource has a more specific, versioned resource [PAV].@en
+    is_a: generalizationOf
+    mixins:
+    - relation
+    - hasVersion
+    slot_uri: dcat:hasVersion
+    multivalued: true
+  first:
+    comments:
+    - "El primer recurso en una colecci\xF3n ordenada o serie de recursos, al que\
+      \ el recurso pertenece.@es"
+    - La prima risorsa in una collezione ordinata o in una serie di risorse, di cui
+      la risorsa fa parte.@it
+    - The first resource in an ordered collection or series of resources, to which
+      the current resource belongs.@en
+    is_a: first
+    slot_uri: dcat:first
+    multivalued: true
+  last:
+    comments:
+    - "El \xFAltimo recurso en una colecci\xF3n ordenada o serie de recursos, al que\
+      \ el recurso pertenece.@es"
+    - L'ultima risorsa in una collezione ordinata o in una serie di risorse, di cui
+      la risorsa fa parte.@it
+    - The last resource in an ordered collection or series of resources, to which
+      the current resource belongs.@en
+    is_a: last
+    slot_uri: dcat:last
+    multivalued: true
+  prev:
+    comments:
+    - La risorsa precedente a quella attuale in una collezione ordinata o in una serie
+      di risorse.@it
+    - The previous resource (before the current one) in an ordered collection or series
+      of resources.@en
+    is_a: prev
+    slot_uri: dcat:prev
+    multivalued: true
+  accessService:
+    comments:
+    - A site or end-point that gives access to the distribution of the dataset.@en
+    - "Et websted eller endpoint der giver adgang til en repr\xE6sentation af datas\xE6\
+      ttet.@da"
+    - "Um\xEDst\u011Bn\xED \u010Di p\u0159\xEDstupov\xFD bod zp\u0159\xEDstup\u0148\
+      uj\xEDc\xED distribuci datov\xE9 sady.@cs"
+    - "Un sitio o end-point que da acceso a la distribuci\xF3n de un conjunto de datos.@es"
+    - "Un sito o end-point che d\xE0 accesso alla distribuzione del set di dati.@it"
+    slot_uri: dcat:accessService
+    multivalued: true
+    range: DataService
+  accessURL:
+    comments:
+    - A URL of a resource that gives access to a distribution of the dataset. E.g.
+      landing page, feed, SPARQL endpoint. Use for all cases except a simple download
+      link, in which case downloadURL is preferred.@en
+    - "Ceci peut \xEAtre tout type d'URL qui donne acc\xE8s \xE0 une distribution\
+      \ du jeu de donn\xE9es. Par exemple, un lien \xE0 une page HTML contenant un\
+      \ lien au jeu de donn\xE9es, un Flux RSS, un point d'acc\xE8s SPARQL. Utilisez\
+      \ le lorsque votre catalogue ne contient pas d'information sur quoi il est ou\
+      \ quand ce n'est pas t\xE9l\xE9chargeable.@fr"
+    - "En URL for en ressource som giver adgang til en repr\xE6sentation af dats\xE6\
+      ttet. Fx destinationsside, feed, SPARQL-endpoint. Anvendes i alle sammenh\xE6\
+      nge undtagen til angivelse af et simpelt download link hvor anvendelse af egenskaben\
+      \ downloadURL foretr\xE6kkes.@da"
+    - "Puede ser cualquier tipo de URL que de acceso a una distribuci\xF3n del conjunto\
+      \ de datos, e.g., p\xE1gina de destino, descarga, URL feed, punto de acceso\
+      \ SPARQL. Esta propriedad se debe usar cuando su cat\xE1logo de datos no tiene\
+      \ informaci\xF3n sobre donde est\xE1 o cuando no se puede descargar.@es"
+    - "URL zdroje, p\u0159es kter\xE9 je p\u0159\xEDstupn\xE1 distribuce datov\xE9\
+      \ sady. P\u0159\xEDkladem m\u016F\u017Ee b\xFDt vstupn\xED str\xE1nka, RSS kan\xE1\
+      l \u010Di SPARQL endpoint. Pou\u017Eijte ve v\u0161ech p\u0159\xEDpadech krom\u011B\
+      \ URL souboru ke sta\u017Een\xED, pro kter\xE9 je lep\u0161\xED pou\u017E\xED\
+      t dcat:downloadURL.@cs"
+    - "Un URL di una risorsa che consente di accedere a una distribuzione del set\
+      \ di dati. Per esempio, pagina di destinazione, feed, endpoint SPARQL. Da utilizzare\
+      \ per tutti i casi, tranne  quando  si tratta di un semplice link per il download\
+      \ nel qual caso \xE8 preferito downloadURL.@it"
+    - "\u039C\u03C0\u03BF\u03C1\u03B5\u03AF \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9\
+      \ \u03BF\u03C0\u03BF\u03B9\u03BF\u03C5\u03B4\u03AE\u03C0\u03BF\u03C4\u03B5 \u03B5\
+      \u03AF\u03B4\u03BF\u03C5\u03C2 URL \u03C0\u03BF\u03C5 \u03B4\u03AF\u03BD\u03B5\
+      \u03B9 \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7 \u03C3\u03C4\u03B7 \u03B4\
+      \u03B9\u03B1\u03BD\u03BF\u03BC\u03AE \u03B5\u03BD\u03CC\u03C2 \u03C3\u03C5\u03BD\
+      \u03CC\u03BB\u03BF\u03C5 \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD\
+      . \u03A0.\u03C7. \u03B9\u03C3\u03C4\u03BF\u03C3\u03B5\u03BB\u03AF\u03B4\u03B1\
+      \ \u03B1\u03C1\u03C7\u03B9\u03BA\u03AE\u03C2 \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\
+      \u03C3\u03B7\u03C2, \u03BC\u03B5\u03C4\u03B1\u03C6\u03CC\u03C1\u03C4\u03C9\u03C3\
+      \u03B7, feed URL, \u03C3\u03B7\u03BC\u03B5\u03AF\u03BF \u03B4\u03B9\u03AC\u03B8\
+      \u03B5\u03C3\u03B7\u03C2 SPARQL. \u039D\u03B1 \u03C7\u03C1\u03B7\u03C3\u03B9\
+      \u03BC\u03BF\u03C0\u03BF\u03B9\u03B5\u03AF\u03C4\u03B1\u03B9 \u03CC\u03C4\u03B1\
+      \u03BD \u03BF \u03BA\u03B1\u03C4\u03AC\u03BB\u03BF\u03B3\u03BF\u03C2 \u03B4\u03B5\
+      \u03BD \u03C0\u03B5\u03C1\u03B9\u03AD\u03C7\u03B5\u03B9 \u03C0\u03BB\u03B7\u03C1\
+      \u03BF\u03C6\u03BF\u03C1\u03AF\u03B5\u03C2 \u03B5\u03B1\u03BD \u03C0\u03C1\u03CC\
+      \u03BA\u03B5\u03B9\u03C4\u03B1\u03B9 \u03AE \u03CC\u03C7\u03B9 \u03B3\u03B9\u03B1\
+      \ \u03BC\u03B5\u03C4\u03B1\u03C6\u03BF\u03C1\u03C4\u03CE\u03C3\u03B9\u03BC\u03BF\
+      \ \u03B1\u03C1\u03C7\u03B5\u03AF\u03BF.@el"
+    - "\u0623\u064A \u0631\u0627\u0628\u0637 \u064A\u062A\u064A\u062D \u0627\u0644\
+      \u0648\u0635\u0648\u0644 \u0625\u0644\u0649 \u0627\u0644\u0628\u064A\u0627\u0646\
+      \u0627\u062A. \u0625\u0630\u0627 \u0643\u0627\u0646 \u0627\u0644\u0631\u0627\
+      \u0628\u0637 \u0647\u0648 \u0631\u0628\u0637 \u0645\u0628\u0627\u0634\u0631\
+      \ \u0644\u0645\u0644\u0641 \u064A\u0645\u0643\u0646 \u062A\u062D\u0645\u064A\
+      \u0644\u0647 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u062E\u0627\u0635\
+      \u064A\u0629 downloadURL@ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u306E\u914D\u4FE1\u306B\u30A2\u30AF\u30BB\
+      \u30B9\u6A29\u3092\u4E0E\u3048\u308B\u30E9\u30F3\u30C7\u30A3\u30F3\u30B0\u30FB\
+      \u30DA\u30FC\u30B8\u3001\u30D5\u30A3\u30FC\u30C9\u3001SPARQL\u30A8\u30F3\u30C9\
+      \u30DD\u30A4\u30F3\u30C8\u3001\u305D\u306E\u4ED6\u306E\u7A2E\u985E\u306E\u8CC7\
+      \u6E90\u3002@ja"
+    slot_uri: dcat:accessURL
+    multivalued: true
+    range: Resource
+  catalog:
+    comments:
+    - A catalog that is listed in the catalog.@en
+    - Et katalog hvis indhold er relevant i forhold til det aktuelle katalog.@da
+    - "Katalog, jeho\u017E obsah je v kontextu tohoto katalogu zaj\xEDmav\xFD.@cs"
+    - Un catalogo i cui contenuti sono di interesse nel contesto di questo catalogo.@it
+    - "Un cat\xE1logo cuyo contenido es de inter\xE9s en el contexto del cat\xE1logo\
+      \ que est\xE1 siendo descripto.@es"
+    is_a: resource
+    slot_uri: dcat:catalog
+    multivalued: true
+    range: Catalog
+  compressFormat:
+    comments:
+    - "El formato de la distribuci\xF3n en el que los datos est\xE1n en forma comprimida,\
+      \ e.g. para reducir el tama\xF1o del archivo a bajar.@es"
+    - "Form\xE1t komprese souboru, ve kter\xE9m jsou data poskytov\xE1na v komprimovan\xE9\
+      \ podob\u011B, nap\u0159. ke sn\xED\u017Een\xED velikosti souboru ke sta\u017E\
+      en\xED.@cs"
+    - Il formato di compressione della distribuzione nel quale i dati sono in forma
+      compressa, ad es. per ridurre le dimensioni del file da scaricare.@it
+    - "Kompressionsformatet for distributionen som indeholder data i et komprimeret\
+      \ format, fx for at reducere st\xF8rrelsen af downloadfilen.@da"
+    - The compression format of the distribution in which the data is contained in
+      a compressed form, e.g. to reduce the size of the downloadable file.@en
+    is_a: format
+    slot_uri: dcat:compressFormat
+    multivalued: true
+    range: MediaType
+  contactPoint:
+    comments:
+    - "Informaci\xF3n relevante de contacto para el recurso catalogado. Se recomienda\
+      \ el uso de vCard.@es"
+    - Informazioni di contatto rilevanti per la risorsa catalogata. Si raccomanda
+      l'uso di vCard.@it
+    - Relevant contact information for the catalogued resource. Use of vCard is recommended.@en
+    - Relevante kontaktoplysninger for den katalogiserede ressource. Anvendelse af
+      vCard anbefales.@da
+    - "Relevantn\xED kontaktn\xED informace pro katalogizovan\xFD zdroj. Doporu\u010D\
+      uje se pou\u017E\xEDt slovn\xEDk VCard.@cs"
+    - "Relie un jeu de donn\xE9es \xE0 une information de contact utile en utilisant\
+      \ VCard.@fr"
+    - "\u03A3\u03C5\u03BD\u03B4\u03AD\u03B5\u03B9 \u03AD\u03BD\u03B1 \u03C3\u03CD\u03BD\
+      \u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD \u03BC\
+      \u03B5 \u03AD\u03BD\u03B1 \u03C3\u03C7\u03B5\u03C4\u03B9\u03BA\u03CC \u03C3\u03B7\
+      \u03BC\u03B5\u03AF\u03BF \u03B5\u03C0\u03B9\u03BA\u03BF\u03B9\u03BD\u03C9\u03BD\
+      \u03AF\u03B1\u03C2, \u03BC\u03AD\u03C3\u03C9 VCard.@el"
+    - "\u062A\u0631\u0628\u0637 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0628\u064A\
+      \u0627\u0646\u0627\u062A \u0628\u0639\u0646\u0648\u0627\u0646 \u0627\u062A\u0635\
+      \u0627\u0644 \u0645\u0648\u0635\u0641  \u0628\u0627\u0633\u062A\u062E\u062F\u0627\
+      \u0645 VCard@ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u3092\u3001VCard\u3092\u7528\u3044\u3066\
+      \u63D0\u4F9B\u3055\u308C\u3066\u3044\u308B\u9069\u5207\u306A\u9023\u7D61\u5148\
+      \u60C5\u5831\u306B\u30EA\u30F3\u30AF\u3057\u307E\u3059\u3002@ja"
+    slot_uri: dcat:contactPoint
+    multivalued: true
+    range: Kind
+  dataset:
+    comments:
+    - A dataset that is listed in the catalog.@en
+    - "En samling af data som er opf\xF8rt i kataloget.@da"
+    - "Kolekce dat, kter\xE1 je katalogizov\xE1na v katalogu.@cs"
+    - "Relie un catalogue \xE0 un jeu de donn\xE9es faisant partie de ce catalogue.@fr"
+    - "Un conjunto de datos que se lista en el cat\xE1logo.@es"
+    - "Una raccolta di dati che \xE8 elencata nel catalogo.@it"
+    - "\u03A3\u03C5\u03BD\u03B4\u03AD\u03B5\u03B9 \u03AD\u03BD\u03B1\u03BD \u03BA\u03B1\
+      \u03C4\u03AC\u03BB\u03BF\u03B3\u03BF \u03BC\u03B5 \u03AD\u03BD\u03B1 \u03C3\u03CD\
+      \u03BD\u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD\
+      \ \u03C4\u03BF \u03BF\u03C0\u03BF\u03AF\u03BF \u03B1\u03BD\u03AE\u03BA\u03B5\
+      \u03B9 \u03C3\u03C4\u03BF\u03BD \u03B5\u03BD \u03BB\u03CC\u03B3\u03C9 \u03BA\
+      \u03B1\u03C4\u03AC\u03BB\u03BF\u03B3\u03BF.@el"
+    - "\u062A\u0631\u0628\u0637 \u0627\u0644\u0641\u0647\u0631\u0633 \u0628\u0642\u0627\
+      \u0626\u0645\u0629 \u0628\u064A\u0627\u0646\u0627\u062A \u0636\u0645\u0646\u0647\
+      @ar"
+    - "\u30AB\u30BF\u30ED\u30B0\u306E\u4E00\u90E8\u3067\u3042\u308B\u30C7\u30FC\u30BF\
+      \u30BB\u30C3\u30C8\u3002@ja"
+    is_a: resource
+    slot_uri: dcat:dataset
+    multivalued: true
+    range: Dataset
+  distribution:
+    comments:
+    - An available distribution of the dataset.@en
+    - "Connecte un jeu de donn\xE9es \xE0 des distributions disponibles.@fr"
+    - "Dostupn\xE1 distribuce datov\xE9 sady.@cs"
+    - "En tilg\xE6ngelig repr\xE6sentation af datas\xE6ttet.@da"
+    - "Una distribuci\xF3n disponible del conjunto de datos.@es"
+    - Una distribuzione disponibile per il set di dati.@it
+    - "\u03A3\u03C5\u03BD\u03B4\u03AD\u03B5\u03B9 \u03AD\u03BD\u03B1 \u03C3\u03CD\u03BD\
+      \u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD \u03BC\
+      \u03B5 \u03BC\u03AF\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03B4\u03B9\
+      \u03B1\u03B8\u03AD\u03C3\u03B9\u03BC\u03B5\u03C2 \u03B4\u03B9\u03B1\u03BD\u03BF\
+      \u03BC\u03AD\u03C2 \u03C4\u03BF\u03C5.@el"
+    - "\u062A\u0631\u0628\u0637 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0628\u064A\
+      \u0627\u0646\u0627\u062A \u0628\u0637\u0631\u064A\u0642\u0629 \u0623\u0648 \u0628\
+      \u0634\u0643\u0644 \u064A\u0633\u0645\u062D  \u0627\u0644\u0648\u0635\u0648\u0644\
+      \ \u0627\u0644\u0649 \u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A@ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u3092\u3001\u305D\u306E\u5229\u7528\u53EF\
+      \u80FD\u306A\u914D\u4FE1\u306B\u63A5\u7D9A\u3057\u307E\u3059\u3002@ja"
+    is_a: relation
+    slot_uri: dcat:distribution
+    multivalued: true
+    range: Distribution
+  downloadURL:
+    comments:
+    - "Ceci est un lien direct \xE0 un fichier t\xE9l\xE9chargeable en un format donn\xE9\
+      e. Exple fichier CSV ou RDF. Le format est d\xE9crit par les propri\xE9t\xE9\
+      s de distribution dcterms:format et/ou dcat:mediaType.@fr"
+    - "La URL de un archivo descargable en el formato dato. Por ejemplo, archivo CSV\
+      \ o archivo RDF. El formato se describe con las propiedades de la distribuci\xF3\
+      n dcterms:format y/o dcat:mediaType.@es"
+    - "Questo \xE8 un link diretto al file scaricabile in un dato formato. E.g. un\
+      \ file CSV o un file RDF. Il formato \xE8 descritto dal dcterms:format e/o dal\
+      \ dcat:mediaType della distribuzione.@it"
+    - The URL of the downloadable file in a given format. E.g. CSV file or RDF file.
+      The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.@en
+    - "URL souboru ke sta\u017Een\xED v dan\xE9m form\xE1tu, nap\u0159\xEDklad CSV\
+      \ nebo RDF soubor. Form\xE1t je pops\xE1n vlastnost\xED distribuce dcterms:format\
+      \ a/nebo dcat:mediaType.@cs"
+    - "URL til fil der kan downloades i et bestemt format. Fx en CSV-fil eller en\
+      \ RDF-fil. Formatet for distributionen angives ved hj\xE6lp af egenskaberne\
+      \ dcterms:format og/eller dcat:mediaType.@da"
+    - "dcat:downloadURL\u306Fdcat:accessURL\u306E\u7279\u5B9A\u306E\u5F62\u5F0F\u3067\
+      \u3059\u3002\u3057\u304B\u3057\u3001DCAT\u30D7\u30ED\u30D5\u30A1\u30A4\u30EB\
+      \u304C\u975E\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9\u30FB\u30ED\u30B1\u30FC\u30B7\
+      \u30E7\u30F3\u306B\u5BFE\u3057\u3066\u306E\u307FaccessURL\u3092\u7528\u3044\u308B\
+      \u5834\u5408\u306B\u306F\u3001\u3088\u308A\u5F37\u3044\u5206\u96E2\u3092\u8AB2\
+      \u3059\u3053\u3068\u3092\u671B\u3080\u53EF\u80FD\u6027\u304C\u3042\u308B\u305F\
+      \u3081\u3001\u3053\u306E\u542B\u610F\u3092\u5F37\u5316\u3057\u306A\u3044\u3088\
+      \u3046\u306B\u3001DCAT\u306F\u3001dcat:downloadURL\u3092dcat:accessURL\u306E\
+      \u30B5\u30D6\u30D7\u30ED\u30D1\u30C6\u30A3\u30FC\u3067\u3042\u308B\u3068\u5B9A\
+      \u7FA9\u3057\u307E\u305B\u3093\u3002@ja"
+    - "\u0395\u03AF\u03BD\u03B1\u03B9 \u03AD\u03BD\u03B1\u03C2 \u03C3\u03CD\u03BD\u03B4\
+      \u03B5\u03C3\u03BC\u03BF\u03C2 \u03AC\u03BC\u03B5\u03C3\u03B7\u03C2 \u03BC\u03B5\
+      \u03C4\u03B1\u03C6\u03CC\u03C1\u03C4\u03C9\u03C3\u03B7\u03C2 \u03B5\u03BD\u03CC\
+      \u03C2 \u03B1\u03C1\u03C7\u03B5\u03AF\u03BF\u03C5 \u03C3\u03B5 \u03BC\u03B9\u03B1\
+      \ \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03B7 \u03BC\u03BF\u03C1\u03C6\u03AE\
+      . \u03A0.\u03C7. \u03AD\u03BD\u03B1 \u03B1\u03C1\u03C7\u03B5\u03AF\u03BF CSV\
+      \ \u03AE RDF. \u0397 \u03BC\u03BF\u03C1\u03C6\u03B7 \u03B1\u03C1\u03C7\u03B5\
+      \u03AF\u03BF\u03C5 \u03C0\u03B5\u03C1\u03B9\u03B3\u03C1\u03AC\u03C6\u03B5\u03C4\
+      \u03B1\u03B9 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03B9\u03B4\u03B9\u03CC\u03C4\
+      \u03B7\u03C4\u03B5\u03C2 dcterms:format \u03AE/\u03BA\u03B1\u03B9 dcat:mediaType\
+      \ \u03C4\u03B7\u03C2 \u03B4\u03B9\u03B1\u03BD\u03BF\u03BC\u03AE\u03C2.@el"
+    - "\u0631\u0627\u0628\u0637 \u0645\u0628\u0627\u0634\u0631 \u0644\u0645\u0644\u0641\
+      \ \u064A\u0645\u0643\u0646 \u062A\u062D\u0645\u064A\u0644\u0647. \u0646\u0648\
+      \u0639 \u0627\u0644\u0645\u0644\u0641 \u064A\u062A\u0645 \u062A\u0648\u0635\u064A\
+      \u0641\u0647 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u062E\
+      \u0627\u0635\u064A\u0629 dcterms:format dcat:mediaType @ar"
+    slot_uri: dcat:downloadURL
+    multivalued: true
+    range: Resource
+  endpointDescription:
+    comments:
+    - A description of the service end-point, including its operations, parameters
+      etc.@en
+    - "En beskrivelse af det p\xE5g\xE6ldende tjenesteendpoint, inklusiv dets operationer,\
+      \ parametre etc.@da"
+    - "Popis p\u0159\xEDstupov\xE9ho bodu slu\u017Eby v\u010Detn\u011B operac\xED\
+      , parametr\u016F apod.@cs"
+    - "Una descripci\xF3n del end-point del servicio, incluyendo sus operaciones,\
+      \ par\xE1metros, etc.@es"
+    - Una descrizione dell'endpoint del servizio, incluse le sue operazioni, parametri,
+      ecc.@it
+    slot_uri: dcat:endpointDescription
+    multivalued: true
+  endpointURL:
+    comments:
+    - "Ko\u0159enov\xE9 um\xEDst\u011Bn\xED nebo hlavn\xED p\u0159\xEDstupov\xFD bod\
+      \ slu\u017Eby (IRI p\u0159\xEDstupn\xE9 p\u0159es Web).@cs"
+    - La locazione principale o l'endpoint primario del servizio (un IRI risolvibile
+      via web).@it
+    - "La posici\xF3n ra\xEDz o end-point principal del servicio (una IRI web).@es"
+    - "Rodplaceringen eller det prim\xE6re endpoint for en tjeneste (en web-resolverbar\
+      \ IRI).@da"
+    - The root location or primary endpoint of the service (a web-resolvable IRI).@en
+    slot_uri: dcat:endpointURL
+    multivalued: true
+    range: Resource
+  hadRole:
+    comments:
+    - "Den funktion en entitet eller akt\xF8r har i forhold til en anden ressource.@da"
+    - "Funkce entity \u010Di agenta ve vztahu k jin\xE9 entit\u011B \u010Di zdroji.@cs"
+    - "La funci\xF3n de una entidad o agente con respecto a otra entidad o recurso.@es"
+    - "La funzione di un'entit\xE0 o un agente rispetto ad un'altra entit\xE0 o risorsa.@it"
+    - The function of an entity or agent with respect to another entity or resource.@en
+    slot_uri: dcat:hadRole
+    multivalued: true
+    range: Role
+  hasCurrentVersion:
+    comments:
+    - "Este recurso es m\xE1s espec\xEDfico y versionado con contenido equivalente\
+      \ [PAV].@es"
+    - "Per questa risorsa esiste una risorsa pi\xF9 specifica e versionata, ma con\
+      \ lo stesso contenuto.@it"
+    - This resource has a more specific, versioned resource with equivalent content
+      [PAV].@en
+    is_a: hasVersion
+    slot_uri: dcat:hasCurrentVersion
+    multivalued: true
+  inCatalog:
+    slot_uri: dcat:inCatalog
+    multivalued: true
+  inSeries:
+    comments:
+    - A dataset series of which the dataset is part.@en
+    - "Una serie de conjuntos de datos del cu\xE1l un conjunto de datos es parte.@es"
+    - Una serie di dataset di cui questo dataset fa parte.@it
+    is_a: isPartOf
+    slot_uri: dcat:inSeries
+    multivalued: true
+  isDistributionOf:
+    slot_uri: dcat:isDistributionOf
+    multivalued: true
+  isVersionOf:
+    comments:
+    - A related resource of which the described resource is a version, edition, or
+      adaptation.@en
+    is_a: relation
+    slot_uri: dcterms:isVersionOf
+    multivalued: true
+  landingPage:
+    comments:
+    - A Web page that can be navigated to in a Web browser to gain access to the catalog,
+      a dataset, its distributions and/or additional information.@en
+    - "En webside som der kan navigeres til i en webbrowser for at f\xE5 adgang til\
+      \ kataloget, et datas\xE6t, dets distributioner og/eller yderligere information.@da"
+    - "Una pagina web che pu\xF2 essere navigata per ottenere l'accesso al catalogo,\
+      \ ad un dataset, alle distribuzioni del dataset e/o ad informazioni addizionali.@it"
+    - "Una p\xE1gina web que puede ser visitada en un explorador Web para tener acceso\
+      \ el cat\xE1logo, un conjunto de datos, sus distribuciones y/o informaci\xF3\
+      n adicional.@es"
+    - "Une page Web accessible par un navigateur Web donnant acc\xE8s au catalogue,\
+      \ un jeu de donn\xE9es, ses distributions et/ou des informations additionnelles.@fr"
+    - "Webov\xE1 str\xE1nka, na kterou lze pro z\xEDsk\xE1n\xED p\u0159\xEDstupu ke\
+      \ katalogu, datov\xE9 sad\u011B, jej\xEDm distribuc\xEDm a/nebo dal\u0161\xED\
+      m informac\xEDm p\u0159istoupit webov\xFDm prohl\xED\u017Ee\u010Dem.@cs"
+    - "\u039C\u03AF\u03B1 \u03B9\u03C3\u03C4\u03BF\u03C3\u03B5\u03BB\u03AF\u03B4\u03B1\
+      \ \u03C0\u03BB\u03BF\u03B7\u03B3\u03AF\u03C3\u03B9\u03BC\u03B7 \u03BC\u03AD\u03C3\
+      \u03C9 \u03B5\u03BD\u03CC\u03C2 \u03C6\u03C5\u03BB\u03BB\u03BF\u03BC\u03B5\u03C4\
+      \u03C1\u03B7\u03C4\u03AE (Web browser) \u03C0\u03BF\u03C5 \u03B4\u03AF\u03BD\
+      \u03B5\u03B9 \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7 \u03C3\u03C4\u03BF\
+      \ \u03C3\u03CD\u03BD\u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\
+      \u03C9\u03BD, \u03C4\u03B9\u03C2 \u03B4\u03B9\u03B1\u03BD\u03BF\u03BC\u03AD\u03C2\
+      \ \u03B1\u03C5\u03C4\u03BF\u03CD \u03AE/\u03BA\u03B1\u03B9 \u03B5\u03C0\u03B9\
+      \u03C0\u03C1\u03CC\u03C3\u03B8\u03B5\u03C4\u03B5\u03C2 \u03C0\u03BB\u03B7\u03C1\
+      \u03BF\u03C6\u03BF\u03C1\u03AF\u03B5\u03C2.@el"
+    - "\u0635\u0641\u062D\u0629 \u0648\u0628 \u064A\u0645\u0643\u0646 \u0645\u0646\
+      \ \u062E\u0644\u0627\u0644\u0647\u0627 \u0627\u0644\u0648\u0635\u0648\u0644\
+      \ \u0627\u0644\u0649 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0628\u064A\
+      \u0627\u0646\u0627\u062A \u0623\u0648 \u0625\u0644\u0649 \u0645\u0639\u0644\u0648\
+      \u0645\u0627\u062A \u0625\u0636\u0627\u0641\u064A\u0629 \u0645\u062A\u0639\u0644\
+      \u0642\u0629 \u0628\u0647\u0627 @ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u3001\u305D\u306E\u914D\u4FE1\u304A\u3088\
+      \u3073\uFF08\u307E\u305F\u306F\uFF09\u8FFD\u52A0\u60C5\u5831\u306B\u30A2\u30AF\
+      \u30BB\u30B9\u3059\u308B\u305F\u3081\u306B\u30A6\u30A8\u30D6\u30FB\u30D6\u30E9\
+      \u30A6\u30B6\u3067\u30CA\u30D3\u30B2\u30FC\u30C8\u3067\u304D\u308B\u30A6\u30A7\
+      \u30D6\u30DA\u30FC\u30B8\u3002@ja"
+    is_a: page
+    slot_uri: dcat:landingPage
+    multivalued: true
+    range: Document
+  mediaType:
+    comments:
+    - "Cette propri\xE9t\xE9 doit \xEAtre utilis\xE9e quand c'est d\xE9finit le type\
+      \ de m\xE9dia de la distribution en IANA, sinon dcterms:format DOIT \xEAtre\
+      \ utilis\xE9 avec diff\xE9rentes valeurs.@fr"
+    - "Esta propiedad debe ser usada cuando est\xE1 definido el tipo de media de la\
+      \ distribuci\xF3n en IANA, de otra manera dcterms:format puede ser utilizado\
+      \ con diferentes valores@es"
+    - Il tipo di media della distribuzione come definito da IANA@it
+    - Medietypen for distributionen som den er defineret af IANA.@da
+    - The media type of the distribution as defined by IANA@en
+    - "Typ m\xE9dia distribuce definovan\xFD v IANA.@cs"
+    - "\u0397 \u03B9\u03B4\u03B9\u03CC\u03C4\u03B7\u03C4\u03B1 \u03B1\u03C5\u03C4\u03AE\
+      \ \u0398\u0391 \u03A0\u03A1\u0395\u03A0\u0395\u0399 \u03BD\u03B1 \u03C7\u03C1\
+      \u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03B5\u03AF\u03C4\u03B1\u03B9\
+      \ \u03CC\u03C4\u03B1\u03BD \u03BF \u03C4\u03CD\u03C0\u03BF\u03C2 \u03BC\u03AD\
+      \u03C3\u03BF\u03C5 \u03BC\u03AF\u03B1\u03C2 \u03B4\u03B9\u03B1\u03BD\u03BF\u03BC\
+      \u03AE\u03C2 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BF\u03C1\u03B9\u03C3\u03BC\u03AD\
+      \u03BD\u03BF\u03C2 \u03C3\u03C4\u03BF IANA, \u03B1\u03BB\u03BB\u03B9\u03CE\u03C2\
+      \ \u03B7 \u03B9\u03B4\u03B9\u03CC\u03C4\u03B7\u03C4\u03B1 dcterms:format \u0394\
+      \u03A5\u039D\u0391\u03A4\u0391\u0399 \u03BD\u03B1 \u03C7\u03C1\u03B7\u03C3\u03B9\
+      \u03BC\u03BF\u03C0\u03BF\u03B9\u03B7\u03B8\u03B5\u03AF \u03BC\u03B5 \u03B4\u03B9\
+      \u03B1\u03C6\u03BF\u03C1\u03B5\u03C4\u03B9\u03BA\u03AD\u03C2 \u03C4\u03B9\u03BC\
+      \u03AD\u03C2.@el"
+    - "\u064A\u062C\u0628 \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0647\u0630\u0647\
+      \ \u0627\u0644\u062E\u0627\u0635\u064A\u0629 \u0625\u0630\u0627 \u0643\u0627\
+      \u0646 \u0646\u0648\u0639 \u0627\u0644\u0645\u0644\u0641 \u0645\u0639\u0631\u0641\
+      \ \u0636\u0645\u0646 IANA@ar"
+    - "\u3053\u306E\u30D7\u30ED\u30D1\u30C6\u30A3\u30FC\u306F\u3001\u914D\u4FE1\u306E\
+      \u30E1\u30C7\u30A3\u30A2\u30FB\u30BF\u30A4\u30D7\u304CIANA\u3067\u5B9A\u7FA9\
+      \u3055\u308C\u3066\u3044\u308B\u3068\u304D\u306B\u4F7F\u7528\u3059\u3079\u304D\
+      \u3067\uFF08SHOULD\uFF09\u3001\u305D\u3046\u3067\u306A\u3044\u5834\u5408\u306B\
+      \u306F\u3001dcterms:format\u3092\u69D8\u3005\u306A\u5024\u3068\u5171\u306B\u4F7F\
+      \u7528\u3067\u304D\u307E\u3059\uFF08MAY\uFF09\u3002@ja"
+    is_a: format
+    slot_uri: dcat:mediaType
+    multivalued: true
+    range: MediaType
+  next:
+    slot_uri: dcat:next
+    multivalued: true
+  nextVersion:
+    slot_uri: dcat:nextVersion
+    multivalued: true
+  packageFormat:
+    comments:
+    - "Bal\xED\u010Dkov\xFD form\xE1t souboru, ve kter\xE9m je jeden \u010Di v\xED\
+      ce soubor\u016F seskupeno dohromady, nap\u0159. aby bylo mo\u017En\xE9 st\xE1\
+      hnout sadu souvisej\xEDc\xEDch soubor\u016F nar\xE1z.@cs"
+    - "El formato del archivo en que se agrupan uno o m\xE1s archivos de datos, e.g.\
+      \ para permitir que un conjunto de archivos relacionados se bajen juntos.@es"
+    - "Format til pakning af data med henblik p\xE5 distribution af en eller flere\
+      \ relaterede datafiler der samles til en enhed med henblik p\xE5 samlet distribution.\
+      \ @da"
+    - "Il formato di impacchettamento della distribuzione in cui uno o pi\xF9 file\
+      \ di dati sono raggruppati insieme, ad es. per abilitare un insieme di file\
+      \ correlati da scaricare insieme.@it"
+    - The package format of the distribution in which one or more data files are grouped
+      together, e.g. to enable a set of related files to be downloaded together.@en
+    is_a: format
+    slot_uri: dcat:packageFormat
+    multivalued: true
+    range: MediaType
+  previousVersion:
+    comments:
+    - La versione precedente di una risorsa.@it
+    - The previous version of a resource in a lineage [PAV].@en
+    is_a: wasRevisionOf
+    slot_uri: dcat:previousVersion
+    multivalued: true
+  qualifiedRelation:
+    comments:
+    - "Enlace a una descripci\xF3n de la relaci\xF3n con otro recurso.@es"
+    - Link a una descrizione di una relazione con un'altra risorsa.@it
+    - Link to a description of a relationship with another resource.@en
+    - "Odkaz na popis vztahu s jin\xFDm zdrojem.@cs"
+    - Reference til en beskrivelse af en relation til en anden ressource.@da
+    slot_uri: dcat:qualifiedRelation
+    multivalued: true
+    range: Relationship
+  record:
+    comments:
+    - A record describing the registration of a single dataset or data service that
+      is part of the catalog.@en
+    - "Describe la registraci\xF3n de un conjunto de datos o un servicio de datos\
+      \ en el cat\xE1logo.@es"
+    - "En post der beskriver registreringen af et enkelt datas\xE6t eller en datatjeneste\
+      \ som er opf\xF8rt i kataloget.@da"
+    - "Propojuje katalog a jeho z\xE1znamy.@cs"
+    - "Relie un catalogue \xE0 ses registres.@fr"
+    - Un record che descrive la registrazione di un singolo set di dati o di un servizio
+      dati che fa parte del catalogo.@it
+    - "Z\xE1znam popisuj\xEDc\xED registraci jedn\xE9 datov\xE9 sady \u010Di datov\xE9\
+      \ slu\u017Eby jako\u017Eto sou\u010D\xE1sti katalogu.@cs"
+    - "\u03A3\u03C5\u03BD\u03B4\u03AD\u03B5\u03B9 \u03AD\u03BD\u03B1\u03BD \u03BA\u03B1\
+      \u03C4\u03AC\u03BB\u03BF\u03B3\u03BF \u03BC\u03B5 \u03C4\u03B9\u03C2 \u03BA\u03B1\
+      \u03C4\u03B1\u03B3\u03C1\u03B1\u03C6\u03AD\u03C2 \u03C4\u03BF\u03C5.@el"
+    - "\u062A\u0631\u0628\u0637 \u0627\u0644\u0641\u0647\u0631\u0633 \u0628\u0633\u062C\
+      \u0644 \u0636\u0645\u0646\u0647@ar"
+    - "\u30AB\u30BF\u30ED\u30B0\u306E\u4E00\u90E8\u3067\u3042\u308B\u30AB\u30BF\u30ED\
+      \u30B0\u30FB\u30EC\u30B3\u30FC\u30C9\u3002@ja"
+    slot_uri: dcat:record
+    multivalued: true
+    range: CatalogRecord
+  resource:
+    comments:
+    - A resource that is listed in the catalog.@en
+    - Una risorsa elencata nel catalogo.@it
+    is_a: hasPart
+    slot_uri: dcat:resource
+    multivalued: true
+    range: Resource
+  seriesMember:
+    slot_uri: dcat:seriesMember
+    multivalued: true
+  servesDataset:
+    comments:
+    - A collection of data that this DataService can distribute.@en
+    - En samling af data som denne datatjeneste kan distribuere.@da
+    - "Kolekce dat, kterou je tato Datov\xE1 slu\u017Eba schopna poskytnout.@cs"
+    - "Una colecci\xF3n de datos que este Servicio de Datos puede distribuir.@es"
+    - "Una raccolta di dati che questo DataService pu\xF2 distribuire.@it"
+    slot_uri: dcat:servesDataset
+    multivalued: true
+    range: Dataset
+  service:
+    comments:
+    - A service that is listed in the catalog.@en
+    - "Et websted eller et endpoint som er opf\xF8rt i kataloget.@da"
+    - "Um\xEDst\u011Bn\xED \u010Di p\u0159\xEDstupov\xFD bod registrovan\xFD v katalogu.@cs"
+    - "Un sitio o 'endpoint' que est\xE1 listado en el cat\xE1logo.@es"
+    - Un sito o endpoint elencato nel catalogo.@it
+    is_a: resource
+    slot_uri: dcat:service
+    multivalued: true
+    range: DataService
+  theme:
+    comments:
+    - A main category of the resource. A resource can have multiple themes.@en
+    - Et centralt emne for ressourcen. En ressource kan have flere centrale emner.@da
+    - "Hlavn\xED t\xE9ma zdroje. Zdroj m\u016F\u017Ee m\xEDt v\xEDce t\xE9mat.@cs"
+    - "La categoria principale della risorsa. Una risorsa pu\xF2 avere pi\xF9 temi.@it"
+    - "La categor\xEDa principal del recurso. Un recurso puede tener varios temas.@es"
+    - "La cat\xE9gorie principale de la ressource. Une ressource peut avoir plusieurs\
+      \ th\xE8mes.@fr"
+    - "\u0397 \u03BA\u03CD\u03C1\u03B9\u03B1 \u03BA\u03B1\u03C4\u03B7\u03B3\u03BF\u03C1\
+      \u03AF\u03B1 \u03C4\u03BF\u03C5 \u03C3\u03C5\u03BD\u03CC\u03BB\u03BF\u03C5 \u03B4\
+      \u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD. \u0388\u03BD\u03B1 \u03C3\u03CD\
+      \u03BD\u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD\
+      \ \u03B4\u03CD\u03BD\u03B1\u03C4\u03B1\u03B9 \u03BD\u03B1 \u03AD\u03C7\u03B5\
+      \u03B9 \u03C0\u03BF\u03BB\u03BB\u03B1\u03C0\u03BB\u03AC \u03B8\u03AD\u03BC\u03B1\
+      \u03C4\u03B1.@el"
+    - "\u0627\u0644\u062A\u0635\u0646\u064A\u0641 \u0627\u0644\u0631\u0626\u064A\u0633\
+      \u064A \u0644\u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0628\u064A\u0627\u0646\
+      \u0627\u062A. \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0628\u064A\u0627\u0646\
+      \u0627\u062A \u064A\u0645\u0643\u0646 \u0623\u0646 \u062A\u0645\u0644\u0643\
+      \ \u0623\u0643\u062B\u0631 \u0645\u0646 \u062A\u0635\u0646\u064A\u0641 \u0631\
+      \u0626\u064A\u0633\u064A \u0648\u0627\u062D\u062F.@ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u306E\u4E3B\u8981\u30AB\u30C6\u30B4\u30EA\
+      \u30FC\u3002\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u306F\u8907\u6570\u306E\u30C6\
+      \u30FC\u30DE\u3092\u6301\u3064\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002\
+      @ja"
+    is_a: subject
+    slot_uri: dcat:theme
+    multivalued: true
+  themeTaxonomy:
+    comments:
+    - "El sistema de organizaci\xF3n del conocimiento utilizado para clasificar conjuntos\
+      \ de datos de cat\xE1logos.@es"
+    - Il sistema di organizzazione della conoscenza (KOS) usato per classificare i
+      dataset del catalogo.@it
+    - "Le systh\xE8me d'ogranisation de connaissances utilis\xE9 pour classifier les\
+      \ jeux de donn\xE9es du catalogue.@fr"
+    - "Syst\xE9m organizace znalost\xED (KOS) pou\u017Eit\xFD pro klasifikaci datov\xFD\
+      ch sad v katalogu.@cs"
+    - The knowledge organization system (KOS) used to classify catalog's datasets.@en
+    - "Vidensorganiseringssystem (KOS) som anvendes til at klassificere datas\xE6\
+      t i kataloget.@da"
+    - "\u03A4\u03BF \u03C3\u03CD\u03C3\u03C4\u03B7\u03BC\u03B1 \u03BF\u03C1\u03B3\u03AC\
+      \u03BD\u03C9\u03C3\u03B7\u03C2 \u03B3\u03BD\u03CE\u03C3\u03B7\u03C2 \u03C0\u03BF\
+      \u03C5 \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03B5\u03AF\
+      \u03C4\u03B1\u03B9 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03BA\u03B1\u03C4\u03B7\
+      \u03B3\u03BF\u03C1\u03B9\u03BF\u03C0\u03BF\u03AF\u03B7\u03C3\u03B7 \u03C4\u03C9\
+      \u03BD \u03C3\u03C5\u03BD\u03CC\u03BB\u03C9\u03BD \u03B4\u03B5\u03B4\u03BF\u03BC\
+      \u03AD\u03BD\u03C9\u03BD \u03C4\u03BF\u03C5 \u03BA\u03B1\u03C4\u03B1\u03BB\u03CC\
+      \u03B3\u03BF\u03C5.@el"
+    - "\u0644\u0627\u0626\u062D\u0629 \u0627\u0644\u062A\u0635\u0646\u064A\u0641\u0627\
+      \u062A \u0627\u0644\u0645\u0633\u062A\u062E\u062F\u0645\u0647 \u0644\u062A\u0635\
+      \u0646\u064A\u0641 \u0642\u0648\u0627\u0626\u0645 \u0627\u0644\u0628\u064A\u0627\
+      \u0646\u0627\u062A \u0636\u0645\u0646 \u0627\u0644\u0641\u0647\u0631\u0633@ar"
+    - "\u30AB\u30BF\u30ED\u30B0\u306E\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u3092\u5206\
+      \u985E\u3059\u308B\u305F\u3081\u306B\u7528\u3044\u3089\u308C\u308B\u77E5\u8B58\
+      \u7D44\u7E54\u5316\u4F53\u7CFB\uFF08KOS\uFF1Bknowledge organization system\uFF09\
+      \u3002@ja"
+    slot_uri: dcat:themeTaxonomy
+    multivalued: true
+    range: Resource
+  generalizationOf:
+    slot_uri: prov:generalizationOf
+    multivalued: true
+  homepage:
+    comments:
+    - Este axioma se necesita de manera que Protege cargue DCAT3 sin problemas.@es
+    - This axiom needed so that Protege loads DCAT 3 without errors.@en
+    slot_uri: foaf:homepage
+    multivalued: true
+  page:
+    slot_uri: foaf:page
+    multivalued: true
+  primaryTopic:
+    comments:
+    - Este axioma se necesita de manera que Protege cargue DCAT 3 sin problemas.@es
+    - This axiom needed so that Protege loads DCAT 3 without errors.@en
+    slot_uri: foaf:primaryTopic
+    multivalued: true
+  bbox:
+    comments:
+    - Den geografiske omskrevne firkant af en ressource.@da
+    - "El cuadro delimitador geogr\xE1fico para un recurso.@es"
+    - Il riquadro di delimitazione geografica di una risorsa.@it
+    - "Ohrani\u010Den\xED geografick\xE9 oblasti zdroje.@cs"
+    - The geographic bounding box of a spatial thing [SDW-BP].@en
+    slot_uri: dcat:bbox
+    multivalued: true
+  byteSize:
+    comments:
+    - "El tama\xF1o de una distribuci\xF3n en bytes.@es"
+    - La dimensione di una distribuzione in byte.@it
+    - La taille de la distribution en octects@fr
+    - "St\xF8rrelsen af en distributionen angivet i bytes.@da"
+    - The size of a distribution in bytes.@en
+    - Velikost distribuce v bajtech.@cs
+    - "\u03A4\u03BF \u03BC\u03AD\u03B3\u03B5\u03B8\u03BF\u03C2 \u03BC\u03B9\u03B1\u03C2\
+      \ \u03B4\u03B9\u03B1\u03BD\u03BF\u03BC\u03AE\u03C2 \u03C3\u03B5 bytes.@el"
+    - "\u0627\u0644\u062D\u062C\u0645 \u0628\u0627\u0644\u0628\u0627\u064A\u062A\u0627\
+      \u062A @ar"
+    - "\u30D0\u30A4\u30C8\u306B\u3088\u308B\u914D\u4FE1\u306E\u30B5\u30A4\u30BA\u3002\
+      @ja"
+    slot_uri: dcat:byteSize
+    multivalued: true
+  centroid:
+    comments:
+    - Det geometrisk tyngdepunkt (centroid) for en ressource.@da
+    - "El centro geogr\xE1fico (centroide) de un recurso.@es"
+    - "Geografick\xFD st\u0159ed (centroid) zdroje.@cs"
+    - Il centro geografico (centroide) di una risorsa.@it
+    - The geographic center (centroid) of a spatial thing [SDW-BP].@en
+    slot_uri: dcat:centroid
+    multivalued: true
+  endDate:
+    comments:
+    - "El fin del per\xEDodo.@es"
+    - "Konec doby trv\xE1n\xED.@cs"
+    - La fine del periodo.@it
+    - "Slutningen p\xE5 perioden.@da"
+    - The end of the period.@en
+    slot_uri: dcat:endDate
+    multivalued: true
+  keyword:
+    comments:
+    - A keyword or tag describing a resource.@en
+    - "Et n\xF8gleord eller tag til beskrivelse af en ressource.@da"
+    - "Kl\xED\u010Dov\xE9 slovo nebo zna\u010Dka popisuj\xEDc\xED zdroj.@cs"
+    - "Un mot-cl\xE9 ou \xE9tiquette d\xE9crivant une ressource.@fr"
+    - Una palabra clave o etiqueta que describe un recurso.@es
+    - Una parola chiave o un'etichetta per descrivere la risorsa.@it
+    - "\u039C\u03AF\u03B1 \u03BB\u03AD\u03BE\u03B7-\u03BA\u03BB\u03B5\u03B9\u03B4\u03AF\
+      \ \u03AE \u03BC\u03AF\u03B1 \u03B5\u03C4\u03B9\u03BA\u03AD\u03C4\u03B1 \u03C0\
+      \u03BF\u03C5 \u03C0\u03B5\u03C1\u03B9\u03B3\u03C1\u03AC\u03C6\u03B5\u03B9 \u03C4\
+      \u03BF \u03C3\u03CD\u03BD\u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\
+      \u03BD\u03C9\u03BD.@el"
+    - "\u0643\u0644\u0645\u0629  \u0645\u0641\u062A\u0627\u062D\u064A\u0647 \u062A\
+      \u0648\u0635\u0641 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0628\u064A\u0627\
+      \u0646\u0627\u062A@ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u3092\u8A18\u8FF0\u3057\u3066\u3044\u308B\
+      \u30AD\u30FC\u30EF\u30FC\u30C9\u307E\u305F\u306F\u30BF\u30B0\u3002@ja"
+    slot_uri: dcat:keyword
+    multivalued: true
+  spatialResolutionInMeters:
+    comments:
+    - "mindste geografiske afstand som kan erkendes i et datas\xE6t, m\xE5lt i meter.@da"
+    - minimum spatial separation resolvable in a dataset, measured in meters.@en-us
+    - minimum spatial separation resolvable in a dataset, measured in metres.@en-gb
+    - "minim\xE1ln\xED prostorov\xFD rozestup rozeznateln\xFD v datov\xE9 sad\u011B\
+      , m\u011B\u0159eno v metrech.@cs"
+    - "m\xEDnima separac\xEDon espacial disponible en un conjunto de datos, medida\
+      \ en metros.@es"
+    - separazione spaziale minima risolvibile in un set di dati, misurata in metri.@it
+    slot_uri: dcat:spatialResolutionInMeters
+    multivalued: true
+  startDate:
+    slot_uri: dcat:startDate
+    multivalued: true
+  temporalResolution:
+    comments:
+    - "mindste tidsperiode der kan resolveres i datas\xE6ttet.@da"
+    - minimum time period resolvable in a dataset.@en
+    - "minim\xE1ln\xED doba trv\xE1n\xED rozli\u0161iteln\xE1 v datov\xE9 sad\u011B\
+      .@cs"
+    - periodo di tempo minimo risolvibile in un set di dati.@it
+    - "per\xEDodo de tiempo m\xEDnimo en el conjunto de datos.@es"
+    slot_uri: dcat:temporalResolution
+    multivalued: true
+  version:
+    comments:
+    - "El indicador de versi\xF3n (nombre o identificador) del recurso.@es"
+    - L'indicatore di versione (un nome o un identificatore) di una risorsa.@it
+    - The version indicator (name or identifier) of a resource.@en
+    slot_uri: dcat:version
+    multivalued: true
+  domainIncludes:
+    slot_uri: http://purl.org/dc/dcam/domainIncludes
+    multivalued: true
+  rangeIncludes:
+    slot_uri: sdo:rangeIncludes
+    multivalued: true
+  contributor:
+    comments:
+    - An entity responsible for making contributions to the resource.@en
+    is_a: contributor
+    slot_uri: dcterms:contributor
+    multivalued: true
+  coverage:
+    comments:
+    - The spatial or temporal topic of the resource, spatial applicability of the
+      resource, or jurisdiction under which the resource is relevant.@en
+    is_a: coverage
+    slot_uri: dcterms:coverage
+    multivalued: true
+  creator:
+    comments:
+    - An entity responsible for making the resource.@en
+    is_a: contributor
+    mixins:
+    - creator
+    slot_uri: dcterms:creator
+    multivalued: true
+  date:
+    comments:
+    - A point or period of time associated with an event in the lifecycle of the resource.@en
+    is_a: date
+    slot_uri: http://purl.org/dc/elements/1.1/date
+    multivalued: true
+  description:
+    comments:
+    - An account of the resource.@en
+    is_a: description
+    slot_uri: dcterms:description
+    multivalued: true
+  format:
+    comments:
+    - The file format, physical medium, or dimensions of the resource.@en
+    is_a: format
+    slot_uri: http://purl.org/dc/elements/1.1/format
+    multivalued: true
+  identifier:
+    comments:
+    - An unambiguous reference to the resource within a given context.@en
+    is_a: identifier
+    slot_uri: http://purl.org/dc/elements/1.1/identifier
+    multivalued: true
+  language:
+    comments:
+    - A language of the resource.@en
+    is_a: language
+    slot_uri: dcterms:language
+    multivalued: true
+  publisher:
+    comments:
+    - An entity responsible for making the resource available.@en
+    is_a: publisher
+    slot_uri: dcterms:publisher
+    multivalued: true
+  relation:
+    comments:
+    - A related resource.@en
+    is_a: relation
+    slot_uri: http://purl.org/dc/elements/1.1/relation
+    multivalued: true
+  rights:
+    comments:
+    - Information about rights held in and over the resource.@en
+    is_a: rights
+    slot_uri: dcterms:rights
+    multivalued: true
+  source:
+    comments:
+    - A related resource from which the described resource is derived.@en
+    is_a: source
+    mixins:
+    - relation
+    slot_uri: dcterms:source
+    multivalued: true
+  subject:
+    comments:
+    - A topic of the resource.@en
+    is_a: subject
+    slot_uri: http://purl.org/dc/elements/1.1/subject
+    multivalued: true
+  title:
+    comments:
+    - A name given to the resource.@en
+    is_a: title
+    slot_uri: http://purl.org/dc/elements/1.1/title
+    multivalued: true
+  type:
+    comments:
+    - The nature or genre of the resource.@en
+    is_a: type
+    slot_uri: dcterms:type
+    multivalued: true
+  abstract:
+    comments:
+    - A summary of the resource.@en
+    is_a: description
+    slot_uri: dcterms:abstract
+    multivalued: true
+  accessRights:
+    comments:
+    - Information about who access the resource or an indication of its security status.@en
+    is_a: rights
+    slot_uri: dcterms:accessRights
+    multivalued: true
+  accrualMethod:
+    comments:
+    - The method by which items are added to a collection.@en
+    slot_uri: dcterms:accrualMethod
+    multivalued: true
+  accrualPeriodicity:
+    comments:
+    - The frequency with which items are added to a collection.@en
+    slot_uri: dcterms:accrualPeriodicity
+    multivalued: true
+  accrualPolicy:
+    comments:
+    - The policy governing the addition of items to a collection.@en
+    slot_uri: dcterms:accrualPolicy
+    multivalued: true
+  audience:
+    comments:
+    - A class of agents for whom the resource is intended or useful.@en
+    slot_uri: dcterms:audience
+    multivalued: true
+  conformsTo:
+    comments:
+    - An established standard to which the described resource conforms.@en
+    is_a: relation
+    slot_uri: dcterms:conformsTo
+    multivalued: true
+  educationLevel:
+    comments:
+    - A class of agents, defined in terms of progression through an educational or
+      training context, for which the described resource is intended.@en
+    is_a: audience
+    slot_uri: dcterms:educationLevel
+    multivalued: true
+  extent:
+    comments:
+    - The size or duration of the resource.@en
+    is_a: format
+    slot_uri: dcterms:extent
+    multivalued: true
+  hasFormat:
+    comments:
+    - A related resource that is substantially the same as the pre-existing described
+      resource, but in another format.@en
+    is_a: relation
+    slot_uri: dcterms:hasFormat
+    multivalued: true
+  isFormatOf:
+    comments:
+    - A pre-existing related resource that is substantially the same as the described
+      resource, but in another format.@en
+    is_a: relation
+    slot_uri: dcterms:isFormatOf
+    multivalued: true
+  isReferencedBy:
+    comments:
+    - A related resource that references, cites, or otherwise points to the described
+      resource.@en
+    is_a: relation
+    slot_uri: dcterms:isReferencedBy
+    multivalued: true
+  isReplacedBy:
+    comments:
+    - A related resource that supplants, displaces, or supersedes the described resource.@en
+    is_a: relation
+    slot_uri: dcterms:isReplacedBy
+    multivalued: true
+  isRequiredBy:
+    comments:
+    - A related resource that requires the described resource to support its function,
+      delivery, or coherence.@en
+    is_a: relation
+    slot_uri: dcterms:isRequiredBy
+    multivalued: true
+  license:
+    comments:
+    - A legal document giving official permission to do something with the resource.@en
+    is_a: rights
+    slot_uri: dcterms:license
+    multivalued: true
+  mediator:
+    comments:
+    - An entity that mediates access to the resource.@en
+    is_a: audience
+    slot_uri: dcterms:mediator
+    multivalued: true
+  medium:
+    comments:
+    - The material or physical carrier of the resource.@en
+    is_a: format
+    slot_uri: dcterms:medium
+    multivalued: true
+  references:
+    comments:
+    - A related resource that is referenced, cited, or otherwise pointed to by the
+      described resource.@en
+    is_a: relation
+    slot_uri: dcterms:references
+    multivalued: true
+  replaces:
+    comments:
+    - A related resource that is supplanted, displaced, or superseded by the described
+      resource.@en
+    is_a: relation
+    slot_uri: dcterms:replaces
+    multivalued: true
+  requires:
+    comments:
+    - A related resource that is required by the described resource to support its
+      function, delivery, or coherence.@en
+    is_a: relation
+    slot_uri: dcterms:requires
+    multivalued: true
+  spatial:
+    comments:
+    - Spatial characteristics of the resource.@en
+    is_a: coverage
+    slot_uri: dcterms:spatial
+    multivalued: true
+  tableOfContents:
+    comments:
+    - A list of subunits of the resource.@en
+    is_a: description
+    slot_uri: dcterms:tableOfContents
+    multivalued: true
+  temporal:
+    comments:
+    - Temporal characteristics of the resource.@en
+    is_a: coverage
+    slot_uri: dcterms:temporal
+    multivalued: true
+  editor:
+    slot_uri: bibo:editor
+    multivalued: true
+  translator:
+    slot_uri: bibo:translator
+    multivalued: true
+  preferredNamespacePrefix:
+    slot_uri: vann:preferredNamespacePrefix
+    multivalued: true
+  preferredNamespaceUri:
+    slot_uri: vann:preferredNamespaceUri
+    multivalued: true
+  versionNotes:
+    slot_uri: adms:versionNotes
+    multivalued: true
+  memberOf:
+    slot_uri: org:memberOf
+    multivalued: true
+  depiction:
+    slot_uri: foaf:depiction
+    multivalued: true
+  name:
+    slot_uri: foaf:name
+    multivalued: true
+  workInfoHomepage:
+    slot_uri: foaf:workInfoHomepage
+    multivalued: true
+  alternative:
+    comments:
+    - An alternative name for the resource.@en
+    is_a: title
+    multivalued: true
+  available:
+    comments:
+    - Date that the resource became or will become available.@en
+    is_a: date
+    multivalued: true
+  bibliographicCitation:
+    comments:
+    - A bibliographic reference for the resource.@en
+    is_a: identifier
+    multivalued: true
+  created:
+    comments:
+    - Date of creation of the resource.@en
+    is_a: date
+    multivalued: true
+  dateAccepted:
+    comments:
+    - Date of acceptance of the resource.@en
+    is_a: date
+    multivalued: true
+  dateCopyrighted:
+    comments:
+    - Date of copyright of the resource.@en
+    is_a: date
+    multivalued: true
+  dateSubmitted:
+    comments:
+    - Date of submission of the resource.@en
+    is_a: date
+    multivalued: true
+  hasPart:
+    comments:
+    - A related resource that is included either physically or logically in the described
+      resource.@en
+    is_a: relation
+    multivalued: true
+  isPartOf:
+    comments:
+    - A related resource in which the described resource is physically or logically
+      included.@en
+    is_a: relation
+    multivalued: true
+  issued:
+    comments:
+    - Date of formal issuance of the resource.@en
+    is_a: date
+    multivalued: true
+  modified:
+    comments:
+    - Date on which the resource was changed.@en
+    is_a: date
+    multivalued: true
+  valid:
+    comments:
+    - Date (often a range) of validity of a resource.@en
+    is_a: date
+    multivalued: true
+  Box:
+    comments:
+    - The set of regions in space defined by their geographic coordinates according
+      to the DCMI Box Encoding Scheme.@en
+    multivalued: true
+  ISO3166:
+    comments:
+    - The set of codes listed in ISO 3166-1 for the representation of names of countries.@en
+    multivalued: true
+  ISO639-2:
+    comments:
+    - The three-letter alphabetic codes listed in ISO639-2 for the representation
+      of names of languages.@en
+    multivalued: true
+  ISO639-3:
+    comments:
+    - The set of three-letter codes listed in ISO 639-3 for the representation of
+      names of languages.@en
+    multivalued: true
+  Period:
+    comments:
+    - The set of time intervals defined by their limits according to the DCMI Period
+      Encoding Scheme.@en
+    multivalued: true
+  Point:
+    comments:
+    - The set of points in space defined by their geographic coordinates according
+      to the DCMI Point Encoding Scheme.@en
+    multivalued: true
+  RFC1766:
+    comments:
+    - The set of tags, constructed according to RFC 1766, for the identification of
+      languages.@en
+    multivalued: true
+  RFC3066:
+    comments:
+    - The set of tags constructed according to RFC 3066 for the identification of
+      languages.@en
+    multivalued: true
+  RFC4646:
+    comments:
+    - The set of tags constructed according to RFC 4646 for the identification of
+      languages.@en
+    multivalued: true
+  RFC5646:
+    comments:
+    - The set of tags constructed according to RFC 5646 for the identification of
+      languages.@en
+    multivalued: true
+  URI:
+    comments:
+    - The set of identifiers constructed according to the generic syntax for Uniform
+      Resource Identifiers as specified by the Internet Engineering Task Force.@en
+    multivalued: true
+  W3CDTF:
+    comments:
+    - The set of dates and times constructed according to the W3C Date and Time Formats
+      Specification.@en
+    multivalued: true
+classes:
+  VocabularyEncodingScheme:
+    class_uri: http://purl.org/dc/dcam/VocabularyEncodingScheme
+  Service:
+    class_uri: dctype:Service
+  Agent:
+    comments:
+    - A resource that acts or has the power to act.@en
+    class_uri: dcterms:Agent
+  AgentClass:
+    comments:
+    - A group of agents.@en
+    is_a: Class
+    class_uri: dcterms:AgentClass
+  BibliographicResource:
+    comments:
+    - A book, article, or other documentary resource.@en
+    class_uri: dcterms:BibliographicResource
+  FileFormat:
+    comments:
+    - A digital resource format.@en
+    is_a: MediaType
+    class_uri: dcterms:FileFormat
+  Frequency:
+    comments:
+    - A rate at which something recurs.@en
+    class_uri: dcterms:Frequency
+  Jurisdiction:
+    comments:
+    - The extent or range of judicial, law enforcement, or other authority.@en
+    is_a: LocationPeriodOrJurisdiction
+    class_uri: dcterms:Jurisdiction
+  LicenseDocument:
+    comments:
+    - A legal document giving official permission to do something with a resource.@en
+    is_a: RightsStatement
+    class_uri: dcterms:LicenseDocument
+  LinguisticSystem:
+    comments:
+    - A system of signs, symbols, sounds, gestures, or rules used in communication.@en
+    class_uri: dcterms:LinguisticSystem
+  Location:
+    comments:
+    - A spatial region or named place.@en
+    is_a: LocationPeriodOrJurisdiction
+    slots:
+    - bbox
+    - centroid
+    class_uri: dcterms:Location
+  LocationPeriodOrJurisdiction:
+    comments:
+    - A location, period of time, or jurisdiction.@en
+    class_uri: dcterms:LocationPeriodOrJurisdiction
+  MediaType:
+    comments:
+    - A file format or physical medium.@en
+    is_a: MediaTypeOrExtent
+    class_uri: dcterms:MediaType
+  MediaTypeOrExtent:
+    comments:
+    - A media type or extent.@en
+    class_uri: dcterms:MediaTypeOrExtent
+  MethodOfAccrual:
+    comments:
+    - A method by which resources are added to a collection.@en
+    class_uri: dcterms:MethodOfAccrual
+  MethodOfInstruction:
+    comments:
+    - A process that is used to engender knowledge, attitudes, and skills.@en
+    class_uri: dcterms:MethodOfInstruction
+  PeriodOfTime:
+    comments:
+    - An interval of time that is named or defined by its start and end dates.@en
+    is_a: LocationPeriodOrJurisdiction
+    slots:
+    - endDate
+    - startDate
+    class_uri: dcterms:PeriodOfTime
+  PhysicalMedium:
+    comments:
+    - A physical material or carrier.@en
+    is_a: MediaType
+    class_uri: dcterms:PhysicalMedium
+  PhysicalResource:
+    comments:
+    - A material thing.@en
+    class_uri: dcterms:PhysicalResource
+  Policy:
+    comments:
+    - A plan or course of action by an authority, intended to influence and determine
+      decisions, actions, and other matters.@en
+    class_uri: dcterms:Policy
+  ProvenanceStatement:
+    comments:
+    - Any changes in ownership and custody of a resource since its creation that are
+      significant for its authenticity, integrity, and interpretation.@en
+    class_uri: dcterms:ProvenanceStatement
+  RightsStatement:
+    comments:
+    - A statement about the intellectual property rights (IPR) held in or over a resource,
+      a legal document giving official permission to do something with a resource,
+      or a statement about access rights.@en
+    class_uri: dcterms:RightsStatement
+  SizeOrDuration:
+    comments:
+    - A dimension or extent, or a time taken to play or execute.@en
+    is_a: MediaTypeOrExtent
+    class_uri: dcterms:SizeOrDuration
+  Standard:
+    comments:
+    - A reference point against which other things can be evaluated or compared.@en
+    class_uri: dcterms:Standard
+  List:
+    class_uri: rdf:List
+  Class:
+    class_uri: rdfs:Class
+  Resource:
+    comments:
+    - "Recurso publicado o curado por un agente \xFAnico.@es"
+    - Resource published or curated by a single agent.@en
+    - "Ressource udgivet eller udvalgt og arrangeret af en enkelt akt\xF8r.@da"
+    - Risorsa pubblicata o curata da un singolo agente.@it
+    - "Zdroj publikovan\xFD \u010Di \u0159\xEDzen\xFD jedin\xFDm \u010Dinitelem.@cs"
+    slots:
+    - qualifiedRelation
+    class_uri: dcat:Resource
+  Kind:
+    class_uri: vcard:Kind
+  Catalog:
+    comments:
+    - A curated collection of metadata about resources (e.g., datasets and data services
+      in the context of a data catalog).@en
+    - "En udvalgt og arrangeret samling af metadata om ressourcer (fx datas\xE6t og\
+      \ datatjenester i kontekst af et datakatalog). @da"
+    - "Una colecci\xF3n curada de metadatos sobre recursos (por ejemplo, conjuntos\
+      \ de datos y servicios de datos en el contexto de un cat\xE1logo de datos).@es"
+    - Una raccolta curata di metadati sulle risorse (ad es. sui dataset e relativi
+      servizi nel contesto di cataloghi di dati).@it
+    - "Une collection \xE9labor\xE9e de m\xE9tadonn\xE9es sur les jeux de donn\xE9\
+      es@fr"
+    - "\u0158\xEDzen\xE1 kolekce metadat o datov\xFDch sad\xE1ch a datov\xFDch slu\u017E\
+      b\xE1ch@cs"
+    - "\u039C\u03B9\u03B1 \u03B5\u03C0\u03B9\u03BC\u03B5\u03BB\u03B7\u03BC\u03AD\u03BD\
+      \u03B7 \u03C3\u03C5\u03BB\u03BB\u03BF\u03B3\u03AE \u03BC\u03B5\u03C4\u03B1\u03B4\
+      \u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD \u03C0\u03B5\u03C1\u03AF \u03C3\
+      \u03C5\u03BD\u03CC\u03BB\u03C9\u03BD \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\
+      \u03C9\u03BD@el"
+    - "\u0645\u062C\u0645\u0648\u0639\u0629 \u0645\u0646 \u062A\u0648\u0635\u064A\u0641\
+      \u0627\u062A \u0642\u0648\u0627\u0626\u0645 \u0627\u0644\u0628\u064A\u0627\u0646\
+      \u0627\u062A@ar"
+    - "\u30C7\u30FC\u30BF\u30FB\u30AB\u30BF\u30ED\u30B0\u306F\u3001\u30C7\u30FC\u30BF\
+      \u30BB\u30C3\u30C8\u306B\u95A2\u3059\u308B\u30AD\u30E5\u30EC\u30FC\u30C8\u3055\
+      \u308C\u305F\u30E1\u30BF\u30C7\u30FC\u30BF\u306E\u96C6\u5408\u3067\u3059\u3002\
+      @ja"
+    is_a: Dataset
+    slots:
+    - catalog
+    - dataset
+    - record
+    - resource
+    - service
+    - themeTaxonomy
+    class_uri: dcat:Catalog
+  CatalogRecord:
+    comments:
+    - "1\u3064\u306E\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u3092\u8A18\u8FF0\u3057\u305F\
+      \u30C7\u30FC\u30BF\u30FB\u30AB\u30BF\u30ED\u30B0\u5185\u306E\u30EC\u30B3\u30FC\
+      \u30C9\u3002@ja"
+    - A record in a data catalog, describing the registration of a single dataset
+      or data service.@en
+    - "En post i et datakatalog der beskriver registreringen af et enkelt datas\xE6\
+      t eller en datatjeneste.@da"
+    - Un record in un catalogo di dati che descrive un singolo dataset o servizio
+      di dati.@it
+    - "Un registre du catalogue ou une entr\xE9e du catalogue, d\xE9crivant un seul\
+      \ jeu de donn\xE9es.@fr"
+    - "Un registro en un cat\xE1logo de datos que describe un solo conjunto de datos\
+      \ o un servicio de datos.@es"
+    - "Z\xE1znam v datov\xE9m katalogu popisuj\xEDc\xED jednu datovou sadu \u010D\
+      i datovou slu\u017Ebu.@cs"
+    - "\u039C\u03AF\u03B1 \u03BA\u03B1\u03C4\u03B1\u03B3\u03C1\u03B1\u03C6\u03AE \u03B5\
+      \u03BD\u03CC\u03C2 \u03BA\u03B1\u03C4\u03B1\u03BB\u03CC\u03B3\u03BF\u03C5, \u03B7\
+      \ \u03BF\u03C0\u03BF\u03AF\u03B1 \u03C0\u03B5\u03C1\u03B9\u03B3\u03C1\u03AC\u03C6\
+      \u03B5\u03B9 \u03AD\u03BD\u03B1 \u03C3\u03C5\u03B3\u03BA\u03B5\u03BA\u03C1\u03B9\
+      \u03BC\u03AD\u03BD\u03BF \u03C3\u03CD\u03BD\u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\
+      \u03BF\u03BC\u03AD\u03BD\u03C9\u03BD.@el"
+    slot_usage:
+      primaryTopic:
+        multivalued: false
+        range: Resource
+        required: true
+    class_uri: dcat:CatalogRecord
+  DataService:
+    comments:
+    - A site or end-point providing operations related to the discovery of, access
+      to, or processing functions on, data or related resources.@en
+    - "Et websted eller endpoint der udstiller operationer relateret til opdagelse\
+      \ af, adgang til eller behandlende funktioner p\xE5 data eller relaterede ressourcer.@da"
+    - "Um\xEDst\u011Bn\xED \u010Di p\u0159\xEDstupov\xFD bod poskytuj\xEDc\xED operace\
+      \ souvisej\xEDc\xED s hled\xE1n\xEDm, p\u0159istupem k, \u010Di v\xFDkonem funkc\xED\
+      \ na datech \u010Di souvisej\xEDc\xEDch zdroj\xEDch.@cs"
+    - Un sitio o end-point que provee operaciones relacionadas a funciones de descubrimiento,
+      acceso, o procesamiento de datos o recursos relacionados.@es
+    - Un sito o end-point che fornisce operazioni relative alla scoperta, all'accesso
+      o all'elaborazione di funzioni su dati o risorse correlate.@it
+    is_a: Resource
+    mixins:
+    - Service
+    slots:
+    - endpointDescription
+    - endpointURL
+    - servesDataset
+    class_uri: dcat:DataService
+  Dataset:
+    comments:
+    - "1\u3064\u306E\u30A8\u30FC\u30B8\u30A7\u30F3\u30C8\u306B\u3088\u3063\u3066\u516C\
+      \u958B\u307E\u305F\u306F\u30AD\u30E5\u30EC\u30FC\u30C8\u3055\u308C\u30011\u3064\
+      \u4EE5\u4E0A\u306E\u5F62\u5F0F\u3067\u30A2\u30AF\u30BB\u30B9\u307E\u305F\u306F\
+      \u30C0\u30A6\u30F3\u30ED\u30FC\u30C9\u3067\u304D\u308B\u30C7\u30FC\u30BF\u306E\
+      \u96C6\u5408\u3002@ja"
+    - A collection of data, published or curated by a single source, and available
+      for access or download in one or more representations.@en
+    - "En samling af data, udgivet eller udvalgt og arrangeret af en enkelt kilde\
+      \ og som er til r\xE5de for adgang til eller download af i en eller flere repr\xE6\
+      sentationer.@da"
+    - "Kolekce dat poskytovan\xE1 \u010Di \u0159\xEDzen\xE1 jedn\xEDm zdrojem, kter\xE1\
+      \ je k dispozici pro p\u0159\xEDstup \u010Di sta\u017Een\xED v jednom \u010D\
+      i v\xEDce form\xE1tech.@cs"
+    - "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso\
+      \ o il download in uno o pi\xF9 formati.@it"
+    - "Una colecci\xF3n de datos, publicados o conservados por una \xFAnica fuente,\
+      \ y disponibles para ser accedidos o descargados en uno o m\xE1s formatos.@es"
+    - "Une collection de donn\xE9es, publi\xE9e ou \xE9labor\xE9e par une seule source,\
+      \ et disponible pour acc\xE8s ou t\xE9l\xE9chargement dans un ou plusieurs formats.@fr"
+    - "\u039C\u03AF\u03B1 \u03C3\u03C5\u03BB\u03BB\u03BF\u03B3\u03AE \u03B1\u03C0\u03CC\
+      \ \u03B4\u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03B1, \u03B4\u03B7\u03BC\u03BF\
+      \u03C3\u03B9\u03B5\u03C5\u03BC\u03AD\u03BD\u03B7 \u03AE \u03B5\u03C0\u03B9\u03BC\
+      \u03B5\u03BB\u03B7\u03BC\u03AD\u03BD\u03B7 \u03B1\u03C0\u03CC \u03BC\u03AF\u03B1\
+      \ \u03BA\u03B1\u03B9 \u03BC\u03CC\u03BD\u03BF \u03C0\u03B7\u03B3\u03AE, \u03B4\
+      \u03B9\u03B1\u03B8\u03AD\u03C3\u03B9\u03BC\u03B7 \u03B4\u03B5 \u03C0\u03C1\u03BF\
+      \u03C2 \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7 \u03AE \u03BC\u03B5\u03C4\
+      \u03B1\u03C6\u03CC\u03C1\u03C4\u03C9\u03C3\u03B7 \u03C3\u03B5 \u03BC\u03AF\u03B1\
+      \ \u03AE \u03C0\u03B5\u03C1\u03B9\u03C3\u03C3\u03CC\u03C4\u03B5\u03C1\u03B5\u03C2\
+      \ \u03BC\u03BF\u03C1\u03C6\u03AD\u03C2.@el"
+    - "\u0642\u0627\u0626\u0645\u0629 \u0628\u064A\u0627\u0646\u0627\u062A \u0645\u0646\
+      \u0634\u0648\u0631\u0629 \u0623\u0648 \u0645\u062C\u0645\u0648\u0639\u0629 \u0645\
+      \u0646 \u0642\u0628\u0644 \u0645\u0635\u062F\u0631 \u0645\u0627 \u0648 \u0645\
+      \u062A\u0627\u062D \u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u064A\u0647\
+      \u0627 \u0623\u0648 \u062A\u062D\u0645\u064A\u0644\u0647\u0627@ar"
+    is_a: Resource
+    slots:
+    - distribution
+    class_uri: dcat:Dataset
+  DatasetSeries:
+    comments:
+    - A collection of datasets that are published separately, but share some characteristics
+      that group them.@en
+    - "Una colecci\xF3n de conjuntos de datos publicados por separado, pero que comparten\
+      \ caracter\xEDsticas que los agrupan.@es"
+    - Una collezione di dataset che sono pubblicati separatamente, ma che condividono
+      caratteristiche che li rendono parte di uno stesso gruppo.@it
+    is_a: Dataset
+    class_uri: dcat:DatasetSeries
+  Distribution:
+    comments:
+    - A specific representation of a dataset. A dataset might be available in multiple
+      serializations that may differ in various ways, including natural language,
+      media-type or format, schematic organization, temporal and spatial resolution,
+      level of detail or profiles (which might specify any or all of the above).@en
+    - "En specifik repr\xE6sentation af et datas\xE6t. Et datas\xE6t kan v\xE6re tilg\xE6\
+      ngelig i mange serialiseringer der kan variere p\xE5 forskellige vis, herunder\
+      \ sprog, medietype eller format, systemorganisering, tidslig- og geografisk\
+      \ opl\xF8sning, detaljeringsniveau eller profiler (der kan specificere en eller\
+      \ flere af ovenst\xE5ende).@da"
+    - "Konkr\xE9tn\xED reprezentace datov\xE9 sady. Datov\xE1 sada m\u016F\u017Ee\
+      \ b\xFDt dostupn\xE1 v r\u016Fzn\xFDch serializac\xEDch, kter\xE9 se mohou navz\xE1\
+      jem li\u0161it r\u016Fzn\xFDmi zp\u016Fsoby, mimo jin\xE9 p\u0159irozen\xFD\
+      m jazykem, media-typem \u010Di form\xE1tem, schematickou organizac\xED, \u010D\
+      asov\xFDm a prostorov\xFDm rozli\u0161en\xEDm, \xFArovn\xED detailu \u010Di\
+      \ profily (kter\xE9 mohou specifikovat n\u011Bkter\xE9 \u010Di v\u0161echny\
+      \ tyto rozd\xEDly).@cs"
+    - "Rappresenta una forma disponibile e specifica del dataset. Ciascun dataset\
+      \ pu\xF2 essere disponibile in forme differenti, che possono rappresentare formati\
+      \ diversi o diversi punti di accesso per un dataset. Esempi di distribuzioni\
+      \ sono un file CSV scaricabile, una API o un RSS feed.@it"
+    - "Repr\xE9sente une forme sp\xE9cifique d'un jeu de donn\xE9es. Caque jeu de\
+      \ donn\xE9es peut \xEAtre disponible sous diff\xE9rentes formes, celles-ci pouvant\
+      \ repr\xE9senter diff\xE9rents formats du jeu de donn\xE9es ou diff\xE9rents\
+      \ endpoint. Des exemples de distribution sont des fichirs CSV, des API ou des\
+      \ flux RSS.@fr"
+    - "Una representaci\xF3n espec\xEDfica de los datos. Cada conjunto de datos puede\
+      \ estar disponible en formas diferentes, las cu\xE1les pueden variar en distintas\
+      \ formas, incluyendo el idioma, 'media-type' o formato, organizaci\xF3n esquem\xE1\
+      tica, resoluci\xF3n temporal y espacial, nivel de detalle o perfiles (que pueden\
+      \ especificar cualquiera o todas las diferencias anteriores).@es"
+    - "\u0391\u03BD\u03B1\u03C0\u03B1\u03C1\u03B9\u03C3\u03C4\u03AC \u03BC\u03AF\u03B1\
+      \ \u03C3\u03C5\u03B3\u03BA\u03B5\u03BA\u03C1\u03B9\u03BC\u03AD\u03BD\u03B7 \u03B4\
+      \u03B9\u03B1\u03B8\u03AD\u03C3\u03B9\u03BC\u03B7 \u03BC\u03BF\u03C1\u03C6\u03AE\
+      \ \u03B5\u03BD\u03CC\u03C2 \u03C3\u03C5\u03BD\u03CC\u03BB\u03BF\u03C5 \u03B4\
+      \u03B5\u03B4\u03BF\u03BC\u03AD\u03BD\u03C9\u03BD. \u039A\u03AC\u03B8\u03B5 \u03C3\
+      \u03CD\u03BD\u03BF\u03BB\u03BF \u03B4\u03B5\u03B4\u03BF\u03BC\u03B5\u03BD\u03C9\
+      \u03BD \u03BC\u03C0\u03BF\u03C1\u03B5\u03AF \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\
+      \u03B9 \u03B4\u03B9\u03B1\u03B8\u03AD\u03C3\u03B9\u03BC\u03BF \u03C3\u03B5 \u03B4\
+      \u03B9\u03B1\u03C6\u03BF\u03C1\u03B5\u03C4\u03B9\u03BA\u03AD\u03C2 \u03BC\u03BF\
+      \u03C1\u03C6\u03AD\u03C2, \u03BF\u03B9 \u03BC\u03BF\u03C1\u03C6\u03AD\u03C2\
+      \ \u03B1\u03C5\u03C4\u03AD\u03C2 \u03BC\u03C0\u03BF\u03C1\u03B5\u03AF \u03BD\
+      \u03B1 \u03B1\u03BD\u03B1\u03C0\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BD\
+      \ \u03B4\u03B9\u03B1\u03C6\u03BF\u03C1\u03B5\u03C4\u03B9\u03BA\u03AD\u03C2 \u03BC\
+      \u03BF\u03C1\u03C6\u03AD\u03C2 \u03B1\u03C1\u03C7\u03B5\u03AF\u03C9\u03BD \u03AE\
+      \ \u03B4\u03B9\u03B1\u03C6\u03BF\u03C1\u03B5\u03C4\u03B9\u03BA\u03AC \u03C3\u03B7\
+      \u03BC\u03B5\u03AF\u03B1 \u03B4\u03B9\u03AC\u03B8\u03B5\u03C3\u03B7\u03C2. \u03A0\
+      \u03B1\u03C1\u03B1\u03B4\u03B5\u03AF\u03B3\u03BC\u03B1\u03C4\u03B1 \u03B4\u03B9\
+      \u03B1\u03BD\u03BF\u03BC\u03CE\u03BD \u03C3\u03C5\u03BC\u03C0\u03B5\u03C1\u03B9\
+      \u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03BF\u03C5\u03BD \u03AD\u03BD\u03B1 \u03BC\
+      \u03B5\u03C4\u03B1\u03C6\u03BF\u03C1\u03C4\u03CE\u03C3\u03B9\u03BC\u03BF \u03B1\
+      \u03C1\u03C7\u03B5\u03AF\u03BF \u03BC\u03BF\u03C1\u03C6\u03AE\u03C2 CSV, \u03AD\
+      \u03BD\u03B1 API \u03AE \u03AD\u03BD\u03B1 RSS feed.@el"
+    - "\u0634\u0643\u0644 \u0645\u062D\u062F\u062F \u0644\u0642\u0627\u0626\u0645\u0629\
+      \ \u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A \u064A\u0645\u0643\u0646\
+      \ \u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u064A\u0647. \u0642\u0627\
+      \u0626\u0645\u0629 \u0628\u064A\u0627\u0646\u0627\u062A \u0645\u0627 \u064A\u0645\
+      \u0643\u0646 \u0623\u0646 \u062A\u0643\u0648\u0646 \u0645\u062A\u0627\u062D\u0647\
+      \ \u0628\u0627\u0634\u0643\u0627\u0644 \u0648 \u0623\u0646\u0648\u0627\u0639\
+      \ \u0645\u062A\u0639\u062F\u062F\u0629.  \u0645\u0644\u0641 \u064A\u0645\u0643\
+      \u0646 \u062A\u062D\u0645\u064A\u0644\u0647 \u0623\u0648 \u0648\u0627\u062C\u0647\
+      \u0629 \u0628\u0631\u0645\u062C\u064A\u0629 \u064A\u0645\u0643\u0646 \u0645\u0646\
+      \ \u062E\u0644\u0627\u0644\u0647\u0627 \u0627\u0644\u0648\u0635\u0648\u0644\
+      \ \u0625\u0644\u0649 \u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A \u0647\
+      \u064A \u0623\u0645\u062B\u0644\u0629 \u0639\u0644\u0649 \u0630\u0644\u0643\
+      .@ar"
+    - "\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u306E\u7279\u5B9A\u306E\u5229\u7528\u53EF\
+      \u80FD\u306A\u5F62\u5F0F\u3092\u8868\u308F\u3057\u307E\u3059\u3002\u5404\u30C7\
+      \u30FC\u30BF\u30BB\u30C3\u30C8\u306F\u3001\u7570\u306A\u308B\u5F62\u5F0F\u3067\
+      \u5229\u7528\u3067\u304D\u308B\u3053\u3068\u304C\u3042\u308A\u3001\u3053\u308C\
+      \u3089\u306E\u5F62\u5F0F\u306F\u3001\u30C7\u30FC\u30BF\u30BB\u30C3\u30C8\u306E\
+      \u7570\u306A\u308B\u5F62\u5F0F\u3084\u3001\u7570\u306A\u308B\u30A8\u30F3\u30C9\
+      \u30DD\u30A4\u30F3\u30C8\u3092\u8868\u308F\u3059\u53EF\u80FD\u6027\u304C\u3042\
+      \u308A\u307E\u3059\u3002\u914D\u4FE1\u306E\u4F8B\u306B\u306F\u3001\u30C0\u30A6\
+      \u30F3\u30ED\u30FC\u30C9\u53EF\u80FD\u306ACSV\u30D5\u30A1\u30A4\u30EB\u3001\
+      API\u3001RSS\u30D5\u30A3\u30FC\u30C9\u304C\u542B\u307E\u308C\u307E\u3059\u3002\
+      @ja"
+    slots:
+    - accessURL
+    - compressFormat
+    - downloadURL
+    - mediaType
+    - packageFormat
+    - byteSize
+    class_uri: dcat:Distribution
+  Relationship:
+    comments:
+    - An association class for attaching additional information to a relationship
+      between DCAT Resources.@en
+    - "Asocia\u010Dn\xED t\u0159\xEDda pro p\u0159ipojen\xED dodate\u010Dn\xFDch informac\xED\
+      \ ke vztahu mezi zdroji DCAT.@cs"
+    - En associationsklasse til brug for tilknytning af yderligere information til
+      en relation mellem DCAT-ressourcer.@da
+    - "Una clase de asociaci\xF3n para adjuntar informaci\xF3n adicional a una relaci\xF3\
+      n entre recursos DCAT.@es"
+    - Una classe di associazione per il collegamento di informazioni aggiuntive a
+      una relazione tra le risorse DCAT.@it
+    slots:
+    - hadRole
+    class_uri: dcat:Relationship
+  Role:
+    comments:
+    - A role is the function of a resource or agent with respect to another resource,
+      in the context of resource attribution or resource relationships.@en
+    - "En rolle er den funktion en ressource eller akt\xF8r har i forhold til en anden\
+      \ ressource, i forbindelse med ressourcekreditering eller ressourcerelationer.@da"
+    - "Role je funkce zdroje \u010Di agenta ve vztahu k jin\xE9mu zdroji, v kontextu\
+      \ p\u0159i\u0159azen\xED zdroj\u016F \u010Di vztah\u016F mezi zdroji.@cs"
+    - "Un rol es la funci\xF3n de un recurso o agente con respecto a otro recuros,\
+      \ en el contexto de atribuci\xF3n del recurso o de las relaciones entre recursos.@es"
+    - "Un ruolo \xE8 la funzione di una risorsa o di un agente rispetto ad un'altra\
+      \ risorsa, nel contesto dell'attribuzione delle risorse o delle relazioni tra\
+      \ risorse.@it"
+    is_a: Concept
+    class_uri: dcat:Role
+  Organization:
+    class_uri: org:Organization
+  Document:
+    class_uri: foaf:Document
+  Person:
+    class_uri: foaf:Person
+  Attribution:
+    slots:
+    - hadRole
+  DCMIType:
+    comments:
+    - The set of classes specified by the DCMI Type Vocabulary, used to categorize
+      the nature or genre of the resource.@en
+  DDC:
+    comments:
+    - The set of conceptual resources specified by the Dewey Decimal Classification.@en
+  IMT:
+    comments:
+    - The set of media types specified by the Internet Assigned Numbers Authority.@en
+  LCC:
+    comments:
+    - The set of conceptual resources specified by the Library of Congress Classification.@en
+  LCSH:
+    comments:
+    - The set of labeled concepts specified by the Library of Congress Subject Headings.@en
+  MESH:
+    comments:
+    - The set of labeled concepts specified by the Medical Subject Headings.@en
+  NLM:
+    comments:
+    - The set of conceptual resources specified by the National Library of Medicine
+      Classification.@en
+  TGN:
+    comments:
+    - The set of places specified by the Getty Thesaurus of Geographic Names.@en
+  UDC:
+    comments:
+    - The set of conceptual resources specified by the Universal Decimal Classification.@en
+  instructionalMethod:
+    comments:
+    - A process, used to engender knowledge, attitudes and skills, that the described
+      resource is designed to support.@en
+  provenance:
+    comments:
+    - A statement of any changes in ownership and custody of the resource since its
+      creation that are significant for its authenticity, integrity, and interpretation.@en
+  rightsHolder:
+    comments:
+    - A person or organization owning or managing rights over the resource.@en
+

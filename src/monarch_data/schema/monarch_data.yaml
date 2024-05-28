@@ -1,0 +1,135 @@
+---
+id: https://w3id.org/monarchinitiative/monarch-data
+name: monarch-data
+title: monarch-data
+description: |-
+  A LinkML project for basic metadata for ontologies and datasets.
+license: BSD-3
+see_also:
+  - https://monarchinitiative.github.io/monarch-data
+
+prefixes:
+  monarch_data: https://w3id.org/monarchinitiative/monarch-data/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  schema: http://schema.org/
+  example: https://example.org/
+  prov: http://www.w3.org/ns/prov#
+  dcat: https://www.w3.org/ns/dcat#
+  dcterms: http://purl.org/dc/terms/
+default_prefix: monarch_data
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+
+  NamedThing:
+    description: >-
+      A generic grouping for any identifiable entity.
+    slots:
+      - identifier
+      - name
+      - description
+    class_uri: schema:Thing
+  
+  Entity:
+    is_a: NamedThing
+    description: >-
+      An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary [ref](https://www.w3.org/TR/prov-o/#Entity).
+    class_uri: prov:Entity
+  
+  Activity:
+    is_a: NamedThing
+    description: >-
+      An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities [ref](https://www.w3.org/TR/prov-o/#Activity).
+    slots:
+      - used
+      - attributed_to
+    class_uri: prov:Activity
+  
+  Agent:
+    is_a: NamedThing
+    description: >-
+      An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity [ref](https://www.w3.org/TR/prov-o/#Agent).
+    class_uri: prov:Agent
+  
+  Dataset:
+    is_a: Entity
+    description: >-
+      Represents a Dataset
+    slots:
+      - title
+      - description
+      - identifier
+      - issued
+      - publisher
+      - license
+      - rights
+      - version
+      - contactPoint
+      - distribution
+      - generated_by
+
+  Distribution:
+    is_a: Entity
+    description: >-
+      A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution).
+    slots:
+      - title
+      - accessURL
+      - downloadURL
+      - format
+    class_uri: dcat:Distribution
+
+
+slots:
+  name: 
+    slot_uri: rdfs:label
+  title: 
+    slot_uri: dcterms:title
+    description: The title of the dataset.
+  description:  
+    slot_uri: dcterms:description
+    description: The description of the dataset.
+  identifier:  
+    identifier: true
+    slot_uri: schema:identifier
+  issued:  
+    slot_uri: dcterms:issued
+  publisher: 
+    slot_uri: dcterms:publisher
+  license: 
+    slot_uri: dcterms:license
+  rights: 
+    slot_uri: dcterms:rights
+  version: 
+    slot_uri: dcat:version
+  contactPoint: 
+    slot_uri: dcat:contactPoint
+    description: "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)."
+  distribution: 
+    slot_uri: dcat:distribution
+    description: "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)"
+    range: Distribution
+  accessURL: 
+    slot_uri: dcat:accessURL
+    range: uri
+  downloadURL: 
+    slot_uri: dcat:downloadURL
+    range: uri
+  format: 
+    slot_uri: dcterms:format
+    description: The title of the dataset.
+  generated_by: 
+    slot_uri: prov:wasGeneratedBy
+    range: Activity
+  used: 
+    slot_uri: prov:used
+    range: Entity
+  attributed_to: 
+    slot_uri: prov:wasAttributedTo
+    description: Attribution is the ascribing of an entity to an agent [ref](https://www.w3.org/TR/prov-o/#wasAttributedTo).
+    range: Agent
+

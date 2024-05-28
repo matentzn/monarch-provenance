@@ -1,0 +1,57 @@
+// An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities [ref](https://www.w3.org/TR/prov-o/#Activity).
+message Activity
+ {
+  string identifier = 0
+  string name = 0
+  string description = 0
+  entity used = 0
+  agent attributedTo = 0
+ }
+// An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity [ref](https://www.w3.org/TR/prov-o/#Agent).
+message Agent
+ {
+  string identifier = 0
+  string name = 0
+  string description = 0
+ }
+// Represents a Dataset
+message Dataset
+ {
+  string name = 0
+  string title = 0
+  string description = 0
+  string identifier = 0
+  string issued = 0
+  string publisher = 0
+  string license = 0
+  string rights = 0
+  string version = 0
+  string contactPoint = 0
+  distribution distribution = 0
+  activity generatedBy = 0
+ }
+// A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution).
+message Distribution
+ {
+  string identifier = 0
+  string name = 0
+  string description = 0
+  string title = 0
+  uri accessURL = 0
+  uri downloadURL = 0
+  string format = 0
+ }
+// An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary [ref](https://www.w3.org/TR/prov-o/#Entity).
+message Entity
+ {
+  string identifier = 0
+  string name = 0
+  string description = 0
+ }
+// A generic grouping for any identifiable entity.
+message NamedThing
+ {
+  string identifier = 0
+  string name = 0
+  string description = 0
+ }

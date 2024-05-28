@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "07462f015a240ff3a68f52e25df027b33b364b1b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "monarch-data",
+      "__project_slug": "monarch_data",
+      "github_org": "monarchinitiative",
+      "__source_path": "src/monarch_data/schema/monarch_data.yaml",
+      "project_description": "A LinkML project for basic metadata for ontologies and datasets.",
+      "full_name": "Monarch Data Schema",
+      "email": "info@monarchinitiative.org",
+      "__author": "Monarch Data Schema <info@monarchinitiative.org>",
+      "license": "BSD-3",
+      "main_schema_class": "Dataset",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}
