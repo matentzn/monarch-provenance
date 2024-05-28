@@ -1,5 +1,5 @@
 # Auto generated from monarch_data.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-05-28T17:39:53
+# Generation date: 2024-05-28T18:30:29
 # Schema: monarch-data
 #
 # id: https://w3id.org/monarchinitiative/monarch-data
