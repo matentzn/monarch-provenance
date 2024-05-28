@@ -13,7 +13,7 @@ plugins:
 nav:
   # - Home: home.md
   - Index: index.md
-  - About: about.md
+  - About: practice.md
 site_url: https://monarchinitiative.github.io/monarch-data
 repo_url: https://github.com/monarchinitiative/monarch-data
 
