@@ -1,15 +1,15 @@
 ---
-id: https://w3id.org/monarchinitiative/monarch-data
-name: monarch-data
-title: monarch-data
+id: https://w3id.org/monarchinitiative/promet
+name: promet
+title: promet
 description: |-
   A LinkML project for basic metadata for ontologies and datasets.
 license: BSD-3
 see_also:
-  - https://monarchinitiative.github.io/monarch-data
+  - https://monarchinitiative.github.io/promet
 
 prefixes:
-  monarch_data: https://w3id.org/monarchinitiative/monarch-data/
+  monarch_data: https://w3id.org/monarchinitiative/promet/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/

@@ -1,21 +1,63 @@
----
-site_name: "monarch-data"
+site_name: Minimal Schema for Provenance and Metadata (PROMET)
 theme:
   name: material
-  # palette:
-  #  scheme: slate
-  #  primary: cyan
+  icon:
+    edit: material/pencil 
   features:
+    - content.action.edit
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
     - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
 plugins:
   - search
   - mermaid2
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - attr_list
+  - md_in_html
+  - tables
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+
+site_url: https://matentzn.github.io/promet
+repo_url: https://github.com/matenzn/promet
+edit_uri: edit/master/docs/
+
 nav:
   # - Home: home.md
   - Index: index.md
   - About: practice.md
-site_url: https://monarchinitiative.github.io/monarch-data
-repo_url: https://github.com/monarchinitiative/monarch-data
 
 # Uncomment this block to enable use of Google Analytics.
 # Replace the property value with your own ID.
