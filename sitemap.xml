@@ -1,268 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Activity/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Activity/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Agent/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Agent/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Boolean/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Boolean/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Curie/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Curie/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Dataset/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Dataset/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/DatasetCollection/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/DatasetCollection/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Date/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Date/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/DateOrDatetime/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/DateOrDatetime/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Datetime/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Datetime/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Decimal/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Decimal/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Distribution/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Distribution/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Double/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Double/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Entity/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Entity/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Float/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Float/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Integer/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Integer/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Jsonpath/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Jsonpath/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Jsonpointer/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Jsonpointer/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/NamedThing/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/NamedThing/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Ncname/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Ncname/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Nodeidentifier/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Nodeidentifier/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Objectidentifier/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Objectidentifier/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/PersonStatus/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/PersonStatus/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Sparqlpath/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Sparqlpath/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/String/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/String/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Time/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Time/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Uri/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Uri/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/Uriorcurie/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/Uriorcurie/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/about/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/about/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/accessURL/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/accessURL/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/age_in_years/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/age_in_years/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/attributed_to/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/attributed_to/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/birth_date/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/birth_date/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/contactPoint/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/contactPoint/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/description/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/description/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/downloadURL/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/downloadURL/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/entries/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/entries/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/format/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/format/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/generated_by/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/generated_by/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/id/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/id/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/identifier/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/identifier/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/issued/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/issued/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/license/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/license/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/monarch-data/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/monarch-data/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/name/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/name/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/practice/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/practice/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/primary_email/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/primary_email/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/publisher/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/promet/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/rights/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/publisher/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/title/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/rights/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/used/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/title/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/version/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/used/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarchinitiative.github.io/monarch-data/vital_status/</loc>
-         <lastmod>2024-05-28</lastmod>
+         <loc>https://matentzn.github.io/promet/version/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://matentzn.github.io/promet/vital_status/</loc>
+         <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
