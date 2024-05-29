@@ -1,7 +1,7 @@
 @prefix dcat1: <https://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix linkml: <https://w3id.org/linkml/> .
-@prefix monarch_data: <https://w3id.org/monarchinitiative/monarch-data/> .
+@prefix monarch_data: <https://w3id.org/monarchinitiative/promet/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,49 +14,40 @@ monarch_data:Dataset a owl:Class,
     rdfs:label "Dataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:contactPoint ],
+            owl:onProperty monarch_data:rights ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:generated_by ],
+            owl:onProperty monarch_data:rights ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:title ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:publisher ],
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:issued ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:distribution ],
+            owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:license ],
+            owl:onProperty monarch_data:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:rights ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty monarch_data:distribution ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:rights ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:version ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:description ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty monarch_data:license ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:issued ],
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:generated_by ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:description ],
+            owl:onProperty monarch_data:contactPoint ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:publisher ],
@@ -64,40 +55,31 @@ monarch_data:Dataset a owl:Class,
             owl:allValuesFrom monarch_data:Activity ;
             owl:onProperty monarch_data:generated_by ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:issued ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:title ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:issued ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:title ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 1 ;
             owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:issued ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:contactPoint ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty monarch_data:generated_by ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:contactPoint ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:title ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:identifier ],
+            owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:publisher ],
+            owl:onProperty monarch_data:contactPoint ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:version ],
         [ a owl:Restriction ;
             owl:allValuesFrom monarch_data:Distribution ;
@@ -106,30 +88,48 @@ monarch_data:Dataset a owl:Class,
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:license ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:identifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:issued ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:license ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:publisher ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty monarch_data:version ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:rights ],
+            owl:onProperty monarch_data:publisher ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:distribution ],
         monarch_data:Entity ;
     skos:definition "Represents a Dataset" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:Activity a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Activity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty monarch_data:used ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:attributed_to ],
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:used ],
         [ a owl:Restriction ;
             owl:allValuesFrom monarch_data:Agent ;
             owl:onProperty monarch_data:attributed_to ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty monarch_data:used ],
+            owl:onProperty monarch_data:attributed_to ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:attributed_to ],
@@ -139,7 +139,7 @@ monarch_data:Activity a owl:Class,
         monarch_data:NamedThing ;
     skos:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities [ref](https://www.w3.org/TR/prov-o/#Activity)." ;
     skos:exactMatch prov:Activity ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:Agent a owl:Class,
         linkml:ClassDefinition ;
@@ -147,14 +147,23 @@ monarch_data:Agent a owl:Class,
     rdfs:subClassOf monarch_data:NamedThing ;
     skos:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity [ref](https://www.w3.org/TR/prov-o/#Agent)." ;
     skos:exactMatch prov:Agent ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:Distribution a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Distribution" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:downloadURL ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uri ;
+            owl:onProperty monarch_data:accessURL ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:accessURL ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:format ],
@@ -162,36 +171,27 @@ monarch_data:Distribution a owl:Class,
             owl:minCardinality 0 ;
             owl:onProperty monarch_data:downloadURL ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:format ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:format ],
+            owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uri ;
-            owl:onProperty monarch_data:accessURL ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
             owl:onProperty monarch_data:title ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty monarch_data:accessURL ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:accessURL ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:downloadURL ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:title ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uri ;
             owl:onProperty monarch_data:downloadURL ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:format ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:format ],
         monarch_data:Entity ;
     skos:definition "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)." ;
     skos:exactMatch dcat1:Distribution ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:NamedThing a owl:Class,
         linkml:ClassDefinition ;
@@ -203,109 +203,109 @@ monarch_data:NamedThing a owl:Class,
             owl:minCardinality 1 ;
             owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty monarch_data:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:name ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty monarch_data:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty monarch_data:description ],
+            owl:onProperty monarch_data:name ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:maxCardinality 1 ;
+            owl:onProperty monarch_data:identifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty monarch_data:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty monarch_data:identifier ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty monarch_data:identifier ] ;
+            owl:minCardinality 0 ;
+            owl:onProperty monarch_data:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty monarch_data:description ] ;
     skos:definition "A generic grouping for any identifiable entity." ;
     skos:exactMatch schema1:Thing ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:accessURL a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "accessURL" ;
     rdfs:range linkml:Uri ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:attributed_to a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "attributed_to" ;
     rdfs:range monarch_data:Agent ;
     skos:definition "Attribution is the ascribing of an entity to an agent [ref](https://www.w3.org/TR/prov-o/#wasAttributedTo)." ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:contactPoint a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "contactPoint" ;
     skos:definition "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)." ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:distribution a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "distribution" ;
     rdfs:range monarch_data:Distribution ;
     skos:definition "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:downloadURL a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "downloadURL" ;
     rdfs:range linkml:Uri ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:format a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "format" ;
     skos:definition "The title of the dataset." ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:generated_by a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "generated_by" ;
     rdfs:range monarch_data:Activity ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:issued a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "issued" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:license a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "license" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:name a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "name" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:publisher a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "publisher" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:rights a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "rights" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:used a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "used" ;
     rdfs:range monarch_data:Entity ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:version a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "version" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:Entity a owl:Class,
         linkml:ClassDefinition ;
@@ -313,29 +313,29 @@ monarch_data:Entity a owl:Class,
     rdfs:subClassOf monarch_data:NamedThing ;
     skos:definition "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary [ref](https://www.w3.org/TR/prov-o/#Entity)." ;
     skos:exactMatch prov:Entity ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:description a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "description" ;
     skos:definition "The description of the dataset." ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:identifier a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "identifier" ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
 monarch_data:title a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "title" ;
     skos:definition "The title of the dataset." ;
-    skos:inScheme <https://w3id.org/monarchinitiative/monarch-data> .
+    skos:inScheme <https://w3id.org/monarchinitiative/promet> .
 
-<https://w3id.org/monarchinitiative/monarch-data> a owl:Ontology ;
-    rdfs:label "monarch-data" ;
+<https://w3id.org/monarchinitiative/promet> a owl:Ontology ;
+    rdfs:label "promet" ;
     dcterms:license "BSD-3" ;
-    dcterms:title "monarch-data" ;
-    rdfs:seeAlso <https://monarchinitiative.github.io/monarch-data> ;
+    dcterms:title "promet" ;
+    rdfs:seeAlso <https://monarchinitiative.github.io/promet> ;
     skos:definition "A LinkML project for basic metadata for ontologies and datasets." .
 

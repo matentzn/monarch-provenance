@@ -1,8 +1,8 @@
-# Auto generated from monarch_data.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-05-28T18:30:29
-# Schema: monarch-data
+# Auto generated from promet.yaml by pythongen.py version: 0.0.1
+# Generation date: 2024-05-29T13:26:20
+# Schema: promet
 #
-# id: https://w3id.org/monarchinitiative/monarch-data
+# id: https://w3id.org/monarchinitiative/promet
 # description: A LinkML project for basic metadata for ontologies and datasets.
 # license: BSD-3
 
@@ -11,6 +11,7 @@ import re
 from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
+from datetime import date, datetime
 from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
 
 from linkml_runtime.utils.slot import Slot
@@ -36,7 +37,7 @@ DCAT = CurieNamespace('dcat', 'https://www.w3.org/ns/dcat#')
 DCTERMS = CurieNamespace('dcterms', 'http://purl.org/dc/terms/')
 EXAMPLE = CurieNamespace('example', 'https://example.org/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-MONARCH_DATA = CurieNamespace('monarch_data', 'https://w3id.org/monarchinitiative/monarch-data/')
+MONARCH_DATA = CurieNamespace('monarch_data', 'https://w3id.org/monarchinitiative/promet/')
 PROV = CurieNamespace('prov', 'http://www.w3.org/ns/prov#')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')

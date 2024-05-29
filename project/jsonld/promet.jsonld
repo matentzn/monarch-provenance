@@ -1,11 +1,11 @@
 {
-  "name": "monarch-data",
+  "name": "promet",
   "description": "A LinkML project for basic metadata for ontologies and datasets.",
-  "title": "monarch-data",
+  "title": "promet",
   "see_also": [
-    "https://monarchinitiative.github.io/monarch-data"
+    "https://monarchinitiative.github.io/promet"
   ],
-  "id": "https://w3id.org/monarchinitiative/monarch-data",
+  "id": "https://w3id.org/monarchinitiative/promet",
   "imports": [
     "linkml:types"
   ],
@@ -13,7 +13,7 @@
   "prefixes": [
     {
       "prefix_prefix": "monarch_data",
-      "prefix_reference": "https://w3id.org/monarchinitiative/monarch-data/"
+      "prefix_reference": "https://w3id.org/monarchinitiative/promet/"
     },
     {
       "prefix_prefix": "linkml",
@@ -363,8 +363,8 @@
   "slots": [
     {
       "name": "name",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/name",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/name",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://www.w3.org/2000/01/rdf-schema#label"
       ],
@@ -378,9 +378,9 @@
     },
     {
       "name": "title",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/title",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/title",
       "description": "The title of the dataset.",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/title"
       ],
@@ -395,9 +395,9 @@
     },
     {
       "name": "description",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/description",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/description",
       "description": "The description of the dataset.",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/description"
       ],
@@ -412,8 +412,8 @@
     },
     {
       "name": "identifier",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/identifier",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/identifier",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://schema.org/identifier"
       ],
@@ -430,8 +430,8 @@
     },
     {
       "name": "issued",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/issued",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/issued",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/issued"
       ],
@@ -445,8 +445,8 @@
     },
     {
       "name": "publisher",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/publisher",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/publisher",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/publisher"
       ],
@@ -460,8 +460,8 @@
     },
     {
       "name": "license",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/license",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/license",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/license"
       ],
@@ -475,8 +475,8 @@
     },
     {
       "name": "rights",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/rights",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/rights",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/rights"
       ],
@@ -490,8 +490,8 @@
     },
     {
       "name": "version",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/version",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/version",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "https://www.w3.org/ns/dcat#version"
       ],
@@ -505,9 +505,9 @@
     },
     {
       "name": "contactPoint",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/contactPoint",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/contactPoint",
       "description": "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "https://www.w3.org/ns/dcat#contactPoint"
       ],
@@ -521,9 +521,9 @@
     },
     {
       "name": "distribution",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/distribution",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/distribution",
       "description": "[ref](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "https://www.w3.org/ns/dcat#distribution"
       ],
@@ -537,8 +537,8 @@
     },
     {
       "name": "accessURL",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/accessURL",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/accessURL",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "https://www.w3.org/ns/dcat#accessURL"
       ],
@@ -552,8 +552,8 @@
     },
     {
       "name": "downloadURL",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/downloadURL",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/downloadURL",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "https://www.w3.org/ns/dcat#downloadURL"
       ],
@@ -567,9 +567,9 @@
     },
     {
       "name": "format",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/format",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/format",
       "description": "The title of the dataset.",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://purl.org/dc/terms/format"
       ],
@@ -583,8 +583,8 @@
     },
     {
       "name": "generated_by",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/generated_by",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/generated_by",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://www.w3.org/ns/prov#wasGeneratedBy"
       ],
@@ -598,8 +598,8 @@
     },
     {
       "name": "used",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/used",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/used",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://www.w3.org/ns/prov#used"
       ],
@@ -613,9 +613,9 @@
     },
     {
       "name": "attributed_to",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/attributed_to",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/attributed_to",
       "description": "Attribution is the ascribing of an entity to an agent [ref](https://www.w3.org/TR/prov-o/#wasAttributedTo).",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "http://www.w3.org/ns/prov#wasAttributedTo"
       ],
@@ -631,9 +631,9 @@
   "classes": [
     {
       "name": "NamedThing",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/NamedThing",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/NamedThing",
       "description": "A generic grouping for any identifiable entity.",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "schema:Thing"
       ],
@@ -648,9 +648,9 @@
     },
     {
       "name": "Entity",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/Entity",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/Entity",
       "description": "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary [ref](https://www.w3.org/TR/prov-o/#Entity).",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "prov:Entity"
       ],
@@ -666,9 +666,9 @@
     },
     {
       "name": "Activity",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/Activity",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/Activity",
       "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities [ref](https://www.w3.org/TR/prov-o/#Activity).",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "prov:Activity"
       ],
@@ -686,9 +686,9 @@
     },
     {
       "name": "Agent",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/Agent",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/Agent",
       "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity [ref](https://www.w3.org/TR/prov-o/#Agent).",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "prov:Agent"
       ],
@@ -704,9 +704,9 @@
     },
     {
       "name": "Dataset",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/Dataset",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/Dataset",
       "description": "Represents a Dataset",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "is_a": "Entity",
       "slots": [
         "name",
@@ -723,14 +723,14 @@
         "generated_by"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/monarchinitiative/monarch-data/Dataset",
+      "class_uri": "https://w3id.org/monarchinitiative/promet/Dataset",
       "@type": "ClassDefinition"
     },
     {
       "name": "Distribution",
-      "definition_uri": "https://w3id.org/monarchinitiative/monarch-data/Distribution",
+      "definition_uri": "https://w3id.org/monarchinitiative/promet/Distribution",
       "description": "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) [ref](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution).",
-      "from_schema": "https://w3id.org/monarchinitiative/monarch-data",
+      "from_schema": "https://w3id.org/monarchinitiative/promet",
       "mappings": [
         "dcat:Distribution"
       ],
@@ -750,16 +750,16 @@
     }
   ],
   "metamodel_version": "1.7.0",
-  "source_file": "monarch_data.yaml",
-  "source_file_date": "2024-05-28T17:36:06",
-  "source_file_size": 3971,
-  "generation_date": "2024-05-28T18:30:26",
+  "source_file": "promet.yaml",
+  "source_file_date": "2024-05-29T13:21:00",
+  "source_file_size": 3941,
+  "generation_date": "2024-05-29T13:26:19",
   "@type": "SchemaDefinition",
   "@context": [
-    "project/jsonld/monarch_data.context.jsonld",
+    "project/jsonld/promet.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://w3id.org/monarchinitiative/monarch-data/"
+      "@base": "https://w3id.org/monarchinitiative/promet/"
     }
   ]
 }

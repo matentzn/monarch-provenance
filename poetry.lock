@@ -465,17 +465,6 @@ files = [
 packaging = "*"
 
 [[package]]
-name = "distlib"
-version = "0.3.8"
-description = "Distribution utilities"
-optional = false
-python-versions = "*"
-files = [
-    {file = "distlib-0.3.8-py2.py3-none-any.whl", hash = "sha256:034db59a0b96f8ca18035f36290806a9a6e6bd9d1ff91e45a7f172eb17e51784"},
-    {file = "distlib-0.3.8.tar.gz", hash = "sha256:1530ea13e350031b6312d8580ddb6b27a104275a31106523b8f123787f494f64"},
-]
-
-[[package]]
 name = "docopt"
 version = "0.6.2"
 description = "Pythonic argument parser, that will make you smile"
@@ -594,22 +583,6 @@ files = [
     {file = "fastobo-0.12.3-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:5e6f20a884c9409e9968e77ee74d407564814f2360dfc35440de268d753ad85e"},
     {file = "fastobo-0.12.3.tar.gz", hash = "sha256:f375932a24b078706797eb9296740f2d2e6987a34309bda7c9f235aba1d74217"},
 ]
-
-[[package]]
-name = "filelock"
-version = "3.13.1"
-description = "A platform independent file lock."
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "filelock-3.13.1-py3-none-any.whl", hash = "sha256:57dbda9b35157b05fb3e58ee91448612eb674172fab98ee235ccb0b5bee19a1c"},
-    {file = "filelock-3.13.1.tar.gz", hash = "sha256:521f5f56c50f8426f5e03ad3b281b490a87ef15bc6c526f168290f0c7148d44e"},
-]
-
-[package.extras]
-docs = ["furo (>=2023.9.10)", "sphinx (>=7.2.6)", "sphinx-autodoc-typehints (>=1.24)"]
-testing = ["covdefaults (>=2.3)", "coverage (>=7.3.2)", "diff-cover (>=8)", "pytest (>=7.4.3)", "pytest-cov (>=4.1)", "pytest-mock (>=3.12)", "pytest-timeout (>=2.2)"]
-typing = ["typing-extensions (>=4.8)"]
 
 [[package]]
 name = "fqdn"
@@ -1317,13 +1290,13 @@ regex = ["regex"]
 
 [[package]]
 name = "linkml"
-version = "1.6.11"
+version = "1.7.10"
 description = "Linked Open Data Modeling Language"
 optional = false
-python-versions = ">=3.8.1,<4.0.0"
+python-versions = "<4.0.0,>=3.8.1"
 files = [
-    {file = "linkml-1.6.11-py3-none-any.whl", hash = "sha256:a7f90f8cc5bd3d171812b23eebde04de3b4318ac4f48a5eae476ce890f09907c"},
-    {file = "linkml-1.6.11.tar.gz", hash = "sha256:963e88c1548c5462bc885e4cd96cabbda066866f8737bcc3bb92f4b0247419ae"},
+    {file = "linkml-1.7.10-py3-none-any.whl", hash = "sha256:bf21cce814e9d1509489f1e6e15a7e86e4f11d949490d9a7a5c3f6b5b412ec62"},
+    {file = "linkml-1.7.10.tar.gz", hash = "sha256:1c38601c3cd495e34490b8cf7277fd3674ec68dcbe9f5efcec2658093801ce91"},
 ]
 
 [package.dependencies]
@@ -1336,11 +1309,11 @@ jinja2 = ">=3.1.0"
 jsonasobj2 = ">=1.0.3,<2.0.0"
 jsonschema = {version = ">=4.0.0", extras = ["format"]}
 linkml-dataops = "*"
-linkml-runtime = ">=1.6.0"
+linkml-runtime = ">=1.7.4"
 openpyxl = "*"
 parse = "*"
 prefixcommons = ">=0.1.7"
-prefixmaps = ">=0.1.3"
+prefixmaps = ">=0.2.2"
 pydantic = ">=1.0.0,<3.0.0"
 pyjsg = ">=0.11.6"
 pyshex = ">=0.7.20"
@@ -1351,6 +1324,11 @@ rdflib = ">=6.0.0"
 requests = ">=2.22"
 sqlalchemy = ">=1.4.31"
 watchdog = ">=0.9.0"
+
+[package.extras]
+black = ["black (>=24.0.0)"]
+shacl = ["pyshacl (>=0.25.0,<0.26.0)"]
+tests = ["black (>=24.0.0)", "pyshacl (>=0.25.0,<0.26.0)"]
 
 [[package]]
 name = "linkml-dataops"
@@ -1389,13 +1367,13 @@ pydantic = "*"
 
 [[package]]
 name = "linkml-runtime"
-version = "1.6.3"
+version = "1.7.5"
 description = "Runtime environment for LinkML, the Linked open data modeling language"
 optional = false
-python-versions = ">=3.7.6,<4.0.0"
+python-versions = "<4.0,>=3.8"
 files = [
-    {file = "linkml_runtime-1.6.3-py3-none-any.whl", hash = "sha256:08f616302ce493be775104c87bd5a2ec0eb2c67624e611a3f7e28c978d08a4d1"},
-    {file = "linkml_runtime-1.6.3.tar.gz", hash = "sha256:88e3d0b776055723d187128c03527145dc1ffdc2d2a69e89f8aabce203d418a3"},
+    {file = "linkml_runtime-1.7.5-py3-none-any.whl", hash = "sha256:c58000c7c68fa97b7d76c50421a85a64e25f07eec5bcac464bc00c4cd79007a6"},
+    {file = "linkml_runtime-1.7.5.tar.gz", hash = "sha256:b31197a5398359441ae1ed43470c54377a1d08db961366dda670300dddcd71d7"},
 ]
 
 [package.dependencies]
@@ -2176,25 +2154,18 @@ requests = ">=2.28.1,<3.0.0"
 
 [[package]]
 name = "prefixmaps"
-version = "0.2.1"
+version = "0.2.4"
 description = "A python library for retrieving semantic prefix maps"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = "<4.0,>=3.8"
 files = [
-    {file = "prefixmaps-0.2.1-py3-none-any.whl", hash = "sha256:0d204caeb4c368cb7a981de98117665fd8885ba76f058714f27f5963e620d5a1"},
-    {file = "prefixmaps-0.2.1.tar.gz", hash = "sha256:8aed88739f900e6c0df0ada061b90223c79c29ca074f5ae6d3de423aef8fa3cf"},
+    {file = "prefixmaps-0.2.4-py3-none-any.whl", hash = "sha256:89bf0e6fb08c276f754f9624c42adf2e87c64ee92a3dde1f7eff01f22d85b512"},
+    {file = "prefixmaps-0.2.4.tar.gz", hash = "sha256:ae86a1b31189d0516d199756d5808f75f44b39e86546c356cc78c0fe8d2078af"},
 ]
 
 [package.dependencies]
-click = ">=8.1.3"
 curies = ">=0.5.3"
-pydantic = ">=2.5,<3.0"
 pyyaml = ">=5.3.1"
-tox = ">=4.11.3,<5.0.0"
-
-[package.extras]
-docs = ["Sphinx[docs] (>=7.2.6,<8.0.0)", "myst-parser[docs] (>=2.0.0,<3.0.0)", "sphinx-autodoc-typehints[docs] (>=1.23.4,<2.0.0)", "sphinx-click[docs] (>=4.3.0,<5.0.0)", "sphinx-rtd-theme[docs] (>=1.0.0,<2.0.0)"]
-refresh = ["bioregistry[refresh] (>=0.10.65,<0.11.0)", "rdflib[refresh] (>=6.2.0,<7.0.0)", "requests[refresh] (>=2.28.1,<3.0.0)"]
 
 [[package]]
 name = "pronto"
@@ -2510,25 +2481,6 @@ files = [
 
 [package.extras]
 diagrams = ["jinja2", "railroad-diagrams"]
-
-[[package]]
-name = "pyproject-api"
-version = "1.6.1"
-description = "API to interact with the python pyproject.toml based projects"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "pyproject_api-1.6.1-py3-none-any.whl", hash = "sha256:4c0116d60476b0786c88692cf4e325a9814965e2469c5998b830bba16b183675"},
-    {file = "pyproject_api-1.6.1.tar.gz", hash = "sha256:1817dc018adc0d1ff9ca1ed8c60e1623d5aaca40814b953af14a9cf9a5cae538"},
-]
-
-[package.dependencies]
-packaging = ">=23.1"
-tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
-
-[package.extras]
-docs = ["furo (>=2023.8.19)", "sphinx (<7.2)", "sphinx-autodoc-typehints (>=1.24)"]
-testing = ["covdefaults (>=2.3)", "pytest (>=7.4)", "pytest-cov (>=4.1)", "pytest-mock (>=3.11.1)", "setuptools (>=68.1.2)", "wheel (>=0.41.2)"]
 
 [[package]]
 name = "pyshex"
@@ -3642,33 +3594,6 @@ files = [
 ]
 
 [[package]]
-name = "tox"
-version = "4.12.1"
-description = "tox is a generic virtualenv management and test command line tool"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "tox-4.12.1-py3-none-any.whl", hash = "sha256:c07ea797880a44f3c4f200ad88ad92b446b83079d4ccef89585df64cc574375c"},
-    {file = "tox-4.12.1.tar.gz", hash = "sha256:61aafbeff1bd8a5af84e54ef6e8402f53c6a6066d0782336171ddfbf5362122e"},
-]
-
-[package.dependencies]
-cachetools = ">=5.3.2"
-chardet = ">=5.2"
-colorama = ">=0.4.6"
-filelock = ">=3.13.1"
-packaging = ">=23.2"
-platformdirs = ">=4.1"
-pluggy = ">=1.3"
-pyproject-api = ">=1.6.1"
-tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
-virtualenv = ">=20.25"
-
-[package.extras]
-docs = ["furo (>=2023.9.10)", "sphinx (>=7.2.6)", "sphinx-argparse-cli (>=1.11.1)", "sphinx-autodoc-typehints (>=1.25.2)", "sphinx-copybutton (>=0.5.2)", "sphinx-inline-tabs (>=2023.4.21)", "sphinxcontrib-towncrier (>=0.2.1a0)", "towncrier (>=23.11)"]
-testing = ["build[virtualenv] (>=1.0.3)", "covdefaults (>=2.3)", "detect-test-pollution (>=1.2)", "devpi-process (>=1)", "diff-cover (>=8.0.2)", "distlib (>=0.3.8)", "flaky (>=3.7)", "hatch-vcs (>=0.4)", "hatchling (>=1.21)", "psutil (>=5.9.7)", "pytest (>=7.4.4)", "pytest-cov (>=4.1)", "pytest-mock (>=3.12)", "pytest-xdist (>=3.5)", "re-assert (>=1.1)", "time-machine (>=2.13)", "wheel (>=0.42)"]
-
-[[package]]
 name = "tqdm"
 version = "4.66.1"
 description = "Fast, Extensible Progress Meter"
@@ -3832,26 +3757,6 @@ sast = ["bandit[toml] (>=1.7.5)"]
 testing = ["pytest (>=7.4.0)"]
 tooling = ["black (>=23.7.0)", "pyright (>=1.1.325)", "ruff (>=0.0.287)"]
 tooling-extras = ["pyaml (>=23.7.0)", "pypandoc-binary (>=1.11)", "pytest (>=7.4.0)"]
-
-[[package]]
-name = "virtualenv"
-version = "20.25.0"
-description = "Virtual Python Environment builder"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "virtualenv-20.25.0-py3-none-any.whl", hash = "sha256:4238949c5ffe6876362d9c0180fc6c3a824a7b12b80604eeb8085f2ed7460de3"},
-    {file = "virtualenv-20.25.0.tar.gz", hash = "sha256:bf51c0d9c7dd63ea8e44086fa1e4fb1093a31e963b86959257378aef020e1f1b"},
-]
-
-[package.dependencies]
-distlib = ">=0.3.7,<1"
-filelock = ">=3.12.2,<4"
-platformdirs = ">=3.9.1,<5"
-
-[package.extras]
-docs = ["furo (>=2023.7.26)", "proselint (>=0.13)", "sphinx (>=7.1.2)", "sphinx-argparse (>=0.4)", "sphinxcontrib-towncrier (>=0.2.1a0)", "towncrier (>=23.6)"]
-test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7)", "packaging (>=23.1)", "pytest (>=7.4)", "pytest-env (>=0.8.2)", "pytest-freezer (>=0.4.8)", "pytest-mock (>=3.11.1)", "pytest-randomly (>=3.12)", "pytest-timeout (>=2.1)", "setuptools (>=68)", "time-machine (>=2.10)"]
 
 [[package]]
 name = "watchdog"
@@ -4020,4 +3925,4 @@ docs = []
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "929f06fc03a6c73624720f078793222be44134ab894aad67c7e51d9e641ec06a"
+content-hash = "0d4a6a1fd8a764f62b0087807f5eb668bf59e71337d9bb6d1c7dddbd9c0a68aa"

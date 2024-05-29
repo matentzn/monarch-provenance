@@ -1,4 +1,5 @@
-BASE <https://w3id.org/monarchinitiative/monarch-data/>
+# metamodel_version: 1.7.0
+BASE <https://w3id.org/monarchinitiative/promet/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -113,5 +114,4 @@ linkml:Sparqlpath xsd:string
        )
     } OR @<Activity> OR @<Agent> OR @<Entity>
 )
-
 

@@ -1,16 +1,19 @@
 [tool.poetry]
-name = "monarch_data"
+name = "promet"
 version = "0.1.0"
 description = "A LinkML project for basic metadata for ontologies and datasets."
-authors = ["Monarch Data Schema <info@monarchinitiative.org>"]
+authors = ["Monarch Initiative <info@monarchinitiative.org>"]
 license = "BSD-3"
 readme = "README.md"
-include = ["README.md", "src/monarch_data/schema", "project"]
+include = ["README.md", "src/promet/schema", "project"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 linkml-runtime = "^1.1.24"
 schema-automator = "^0.4.0"
+
+[tool.poetry.group.dev.dependencies]
+linkml = "^1.7.10"
 
 [tool.poetry-dynamic-versioning]
 enable = true

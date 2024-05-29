@@ -4,7 +4,7 @@
    "dcterms": "http://purl.org/dc/terms/",
    "example": "https://example.org/",
    "linkml": "https://w3id.org/linkml/",
-   "monarch_data": "https://w3id.org/monarchinitiative/monarch-data/",
+   "monarch_data": "https://w3id.org/monarchinitiative/promet/",
    "prov": "http://www.w3.org/ns/prov#",
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",

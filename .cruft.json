@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/linkml/linkml-project-cookiecutter",
-  "commit": "07462f015a240ff3a68f52e25df027b33b364b1b",
+  "commit": "d9b85bbbdcc49163416a3e3e18e23fe2ecce501b",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -11,7 +11,7 @@
       "project_description": "A LinkML project for basic metadata for ontologies and datasets.",
       "full_name": "Minimal Schema for Provenance and Metadata",
       "email": "info@monarchinitiative.org",
-      "__author": "Monarch Initiative <info@monarchinitiative.org>",
+      "__author": "Minimal Schema for Provenance and Metadata <info@monarchinitiative.org>",
       "license": "BSD-3",
       "main_schema_class": "Dataset",
       "create_python_classes": "Yes",

@@ -178,11 +178,11 @@
             "type": "object"
         }
     },
-    "$id": "https://w3id.org/monarchinitiative/monarch-data",
+    "$id": "https://w3id.org/monarchinitiative/promet",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
-    "title": "monarch-data",
+    "title": "promet",
     "type": "object",
     "version": null
 }
