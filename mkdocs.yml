@@ -21,11 +21,11 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_div_format
+#  - pymdownx.superfences:
+#      custom_fences:
+#        - name: mermaid
+#          class: mermaid
+#          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tabbed
@@ -47,11 +47,11 @@ markdown_extensions:
   - md_in_html
   - tables
 
-extra_javascript:
-  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+#extra_javascript:
+#  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
 
-site_url: https://matentzn.github.io/promet
-repo_url: https://github.com/matenzn/promet
+site_url: https://matentzn.github.io/monarch-provenance
+repo_url: https://github.com/matentzn/monarch-provenance
 edit_uri: edit/master/docs/
 
 nav:
